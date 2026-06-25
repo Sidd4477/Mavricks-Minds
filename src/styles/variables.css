@@ -1,0 +1,18 @@
+:root {
+  --bg-main: #050012;
+  --bg-card: #5b2ee8;
+  --bg-white: #ffffff;
+
+  --text-white: #ffffff;
+  --text-muted: #b8b3c7;
+  --text-dark: #111111;
+
+  --primary: #6c35ff;
+  --primary-dark: #4b20c8;
+
+  --border-light: rgba(255, 255, 255, 0.14);
+
+  --container-width: 1180px;
+
+  --font-main: "Inter", Arial, sans-serif;
+}

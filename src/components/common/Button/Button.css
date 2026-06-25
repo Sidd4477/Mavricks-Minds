@@ -1,0 +1,35 @@
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  height: 52px;
+  padding: 0 28px;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary-dark)
+  );
+
+  color: var(--text-white);
+
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: .3s ease;
+
+  white-space: nowrap;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}

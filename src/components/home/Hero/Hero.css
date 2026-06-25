@@ -1,0 +1,274 @@
+.hero-section {
+  width: 100%;
+  background: #050012;
+  overflow: hidden;
+
+  padding: 132px 0 88px;
+}
+
+.hero-content {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  position: relative;
+  margin: 0;
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -1.8px;
+  font-family: poppins, sans-serif;
+  width: 106%;
+  height: 100%;
+}
+
+.title-line {
+  display: inline-block;
+  width: 2px;
+  height: 38px;
+  background: #ffffff;
+  margin-right: 18px;
+  transform: translateY(6px);
+}
+
+.red-underline {
+  position: absolute;
+  width: 78px;
+  height: 16px;
+  border-bottom: 4px solid #ff3d4d;
+  border-radius: 50%;
+  top: 50px;
+  right: 137px;
+  transform: rotate(-8deg);
+}
+
+.hero-content p {
+  width: 620px;
+  margin: 22px 0 22px 67px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.55;
+  opacity: 0.82;
+  font-family: poppins, sans-serif;
+  font-weight: 500;
+}
+
+.hero-actions {
+  margin-left: 67px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-btn {
+  width: 180px;
+  height: 44px;
+  background: #ffffff;
+  color: #050012;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: geist, sans-serif;
+}
+
+.mm-icon {
+  width: 49px;
+  height: 49px;
+  object-fit: contain;
+}
+
+.hero-rating div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hero-rating strong {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.hero-rating span {
+  color: #ffcc00;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.hero-rating small {
+  display: block;
+  margin-top: 3px;
+  color: #ffffff;
+  opacity: 0.75;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: poppins, sans-serif;
+}
+
+.hero-image-marquee {
+  width: 100%;
+  margin-top: 88px;
+  overflow: hidden;
+}
+
+.hero-image-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: heroMove 34s linear infinite;
+}
+
+.hero-img-card {
+  width: 320px;
+  height: 320px;
+  border-radius: 48px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.hero-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes heroMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.trusted-section {
+  width: 100%;
+  height: 100%;
+  margin-top: 76px;
+  text-align: center;
+}
+
+.trusted-section p {
+  margin-bottom: 22px;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.9;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+}
+
+.trusted-logo-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.trusted-logo-track {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  width: max-content;
+  animation: trustedMove 28s linear infinite;
+}
+
+.trusted-logo-track img {
+  width: 180px;
+  height: 48px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  opacity: 0.72;
+}
+
+@keyframes trustedMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    width: 86%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-img-card {
+    width: 300px;
+    height: 300px;
+    border-radius: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 42px 0 64px;
+  }
+
+  .hero-content {
+    width: calc(100% - 32px);
+  }
+
+  .hero-content h1 {
+    font-size: 31px;
+    letter-spacing: -1px;
+  }
+
+  .title-line {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .red-underline {
+    width: 58px;
+    top: 36px;
+    right: 14px;
+  }
+
+  .hero-content p,
+  .hero-actions {
+    margin-left: 0;
+  }
+
+  .hero-content p {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .hero-btn {
+    width: 118px;
+    height: 34px;
+    font-size: 10px;
+  }
+
+  .mm-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero-image-marquee {
+    margin-top: 56px;
+  }
+
+  .hero-img-card {
+    width: 220px;
+    height: 220px;
+    border-radius: 28px;
+  }
+
+  .trusted-logo-track {
+    gap: 36px;
+  }
+
+  .trusted-logo-track img {
+    width: 140px;
+    height: 38px;
+  }
+}
