@@ -23,15 +23,56 @@
 .header-inner {
   width: 1180px;
   height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-logo {
-  width: 180px;
-  height: 48px;
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-icon {
+  width: 49px;
+  height: 49px;
   object-fit: contain;
+  display: block;
+}
+
+.header-logo-text {
+  margin-left: 12px;
+}
+
+.header-logo-text h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  line-height: 1;
+
+  letter-spacing: 0.4px;
+
+  font-weight: 250;
+}
+
+.header-logo-text h1 span {
+  font-weight: 800;
+}
+
+.header-logo-text p {
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-size: 7px;
+  letter-spacing: 1.4px;
+
+  font-weight: 500;
+
+  opacity: 0.92;
 }
 
 .header-right {
@@ -43,26 +84,38 @@
 .get-touch-btn {
   width: 116px;
   height: 32px;
-  border: 1px solid #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 999px;
+
   background: transparent;
+
   color: #ffffff;
+
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
+
+  transition: 0.3s;
+}
+
+.get-touch-btn:hover {
+  background: #ffffff;
+  color: #060018;
 }
 
 .menu-btn {
-  width: 32px;
-  height: 32px;
-  border: none;
+  width: 38px;
+  height: 38px;
+
   background: transparent;
+  border: none;
   padding: 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   gap: 4px;
 
   cursor: pointer;
@@ -71,20 +124,51 @@
 .menu-btn span {
   width: 14px;
   height: 1.5px;
+
   background: #ffffff;
+
   border-radius: 10px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1200px) {
   .header-inner {
-    width: calc(100% - 32px);
+    width: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: 70px;
   }
 
-  .header-logo {
-    width: 150px;
+  .header-inner {
+    height: 44px;
+  }
+
+  .header-logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-logo-text {
+    margin-left: 8px;
+  }
+
+  .header-logo-text h1 {
+    font-size: 18px;
+  }
+
+  .header-logo-text p {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+
+  .header-right {
+    gap: 14px;
   }
 
   .get-touch-btn {
-    width: 96px;
+    width: 95px;
     height: 28px;
     font-size: 9px;
   }

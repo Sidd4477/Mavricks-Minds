@@ -1,12 +1,26 @@
 import "./Header.css";
 
-import logo from "../../../assets/images/logos/logoMv.png.png";
+import logoIcon from "../../../assets/images/hero/mmicons.png.png";
 
 const Header = () => {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <img src={logo} alt="Maverick Minds" className="header-logo" />
+        <div className="header-brand">
+          <img
+            src={logoIcon}
+            alt="Maverick Minds"
+            className="header-logo-icon"
+          />
+
+          <div className="header-logo-text">
+            <h1>
+              <span>MAVERICK</span>MINDS
+            </h1>
+
+            <p>BUILDING IDEAS INTO DIGITAL REALITY</p>
+          </div>
+        </div>
 
         <div className="header-right">
           <button className="get-touch-btn">Get In Touch</button>
