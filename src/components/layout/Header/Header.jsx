@@ -1,6 +1,6 @@
 import "./Header.css";
 
-import logoIcon from "../../../assets/images/hero/mmicons.png.png";
+import logoIcon from "../../../assets/images/logos/HeaderLogo.png.png";
 
 const Header = () => {
   return (
