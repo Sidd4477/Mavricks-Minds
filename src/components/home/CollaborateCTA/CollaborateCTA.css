@@ -1,0 +1,218 @@
+.collaborate-section {
+  width: 100%;
+  background: #070116;
+  overflow: hidden;
+  padding: 65px 0 85px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   MOVING TITLE
+========================= */
+
+.collaborate-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 46px;
+}
+
+.collaborate-marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 26px;
+  animation: collaborateMove 38s linear infinite;
+}
+
+.collaborate-marquee-track span {
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.collaborate-star {
+  color: #6c35f4 !important;
+  font-size: 52px !important;
+  line-height: 1;
+}
+
+@keyframes collaborateMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+      CARD
+========================= */
+
+.collaborate-card {
+  width: 1220px;
+  height: 232px;
+  margin: 0 auto;
+  border-radius: 32px;
+  background: linear-gradient(
+    135deg,
+    #6d36f5 0%,
+    #5d2de7 55%,
+    #4b22c0 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* LEFT */
+
+.collaborate-left {
+  width: 730px;
+}
+
+.collaborate-left span {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  letter-spacing: .5px;
+  margin-bottom: 13px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.collaborate-left h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+}
+
+/* RIGHT */
+
+.collaborate-right {
+  width: 490px;
+}
+
+.collaborate-right p {
+  margin: 0;
+  color: rgba(255,255,255,.85);
+  font-size: 16px;
+  line-height: 1.75;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+.collaborate-right button {
+  margin-top: 18px;
+
+  width: 258px;
+  height: 40px;
+
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  transition: .3s;
+}
+
+.collaborate-right button span{
+    font-size:14px;
+    font-weight:400;
+    font-family: "Poppins", sans-serif;
+}
+
+.collaborate-right button:hover{
+    background:#ffffff;
+    color:#5a2de5;
+}
+
+/* =========================
+      MOBILE
+========================= */
+
+@media (max-width:768px){
+
+.collaborate-section{
+    padding:50px 0 65px;
+}
+
+.collaborate-marquee{
+    margin-bottom:30px;
+}
+
+.collaborate-marquee-track{
+    gap:18px;
+    animation-duration:12s;
+}
+
+.collaborate-marquee-track span{
+    font-size:22px;
+}
+
+.collaborate-star{
+    font-size:28px !important;
+}
+
+.collaborate-card{
+
+    width:calc(100% - 34px);
+    height:auto;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:24px 20px;
+}
+
+.collaborate-left{
+    width:100%;
+}
+
+.collaborate-left span{
+    font-size:6px;
+    margin-bottom:10px;
+}
+
+.collaborate-left h2{
+    font-size:24px;
+}
+
+.collaborate-right{
+    width:100%;
+    margin-top:18px;
+}
+
+.collaborate-right p{
+    font-size:9px;
+    width:100%;
+}
+
+.collaborate-right button{
+    margin-top:16px;
+}
+
+}

@@ -19,34 +19,40 @@
 }
 
 .engines-left {
-  width: 420px;
+  width: 520px;
 }
 
 .engines-left h2 {
   margin: 0;
   color: #ffffff;
-  font-size: 42px;
+  font-size: 50px;
   line-height: 1.08;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -1px;
+  font-family: "Poppins", sans-serif;
 }
 
 .engines-left h2::after {
   content: "";
   display: block;
-  width: 155px;
+  width: 200px;
   height: 3px;
   background: hsl(0, 100%, 58%);
-  margin-top: -8px;
+  margin-top: -55px;
+  margin-bottom: 55px;
   margin-left: 82px;
+  transform: rotate(-7.5deg);
+  transform-origin: left center;
 }
 
 .engines-left p {
-  margin: 38px 0 0;
+ 
+  margin-top: 84px;
   color: rgba(255, 255, 255, 0.78);
   font-size: 14px;
   line-height: 1.55;
   font-weight: 400;
+  font-family: "Poppins", sans-serif; 
 }
 
 .engines-icons {
@@ -67,10 +73,11 @@
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
 }
 
-.engine-icon span {
-  font-size: 31px;
-  font-weight: 800;
-  line-height: 1;
+.engine-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
 }
 
 .framer {
@@ -78,49 +85,42 @@
   top: 25px;
   transform: rotate(12deg);
   background: linear-gradient(145deg, #00d5ff, #1d36ff);
-  color: #ffffff;
 }
 
 .python {
   left: 190px;
   top: 0;
   transform: rotate(-15deg);
-  color: #3472a6;
 }
 
 .react {
   left: 325px;
   top: 40px;
   transform: rotate(13deg);
-  color: #00bcd4;
 }
 
 .js {
   right: 35px;
   top: 10px;
   transform: rotate(38deg);
-  color: #d5a400;
 }
 
 .shopify {
   left: 86px;
   top: 165px;
   transform: rotate(19deg);
-  color: #79b744;
 }
 
 .figma {
   left: 235px;
   top: 135px;
   transform: rotate(0deg);
-  color: #ff5a5f;
 }
 
 .flutter {
   right: 35px;
   top: 120px;
   transform: rotate(0deg);
-  color: #29b6f6;
 }
 
 .adobe {
@@ -128,14 +128,12 @@
   bottom: 0;
   transform: rotate(-17deg);
   background: #ff1f10;
-  color: #ffffff;
 }
 
 .java {
   left: 335px;
   bottom: 16px;
   transform: rotate(0deg);
-  color: #e53935;
 }
 
 .mongo {
@@ -143,7 +141,6 @@
   bottom: 45px;
   transform: rotate(-18deg);
   background: #31b84b;
-  color: #ffffff;
 }
 
 .engines-bg-mark {

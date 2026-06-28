@@ -1,16 +1,16 @@
 import "./Engines.css";
 
 const icons = [
-  { name: "Framer", text: "F", className: "framer" },
-  { name: "Python", text: "Py", className: "python" },
-  { name: "React", text: "⚛", className: "react" },
-  { name: "JS", text: "JS", className: "js" },
-  { name: "Shopify", text: "S", className: "shopify" },
-  { name: "Figma", text: "F", className: "figma" },
-  { name: "Flutter", text: "F", className: "flutter" },
-  { name: "Adobe", text: "A", className: "adobe" },
-  { name: "Java", text: "☕", className: "java" },
-  { name: "Mongo", text: "M", className: "mongo" },
+  { name: "Framer", icon: "https://cdn.simpleicons.org/framer/ffffff", className: "framer" },
+  { name: "Python", icon: "https://cdn.simpleicons.org/python", className: "python" },
+  { name: "React", icon: "https://cdn.simpleicons.org/react", className: "react" },
+  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript", className: "js" },
+  { name: "Shopify", icon: "https://cdn.simpleicons.org/shopify", className: "shopify" },
+  { name: "Figma", icon: "https://cdn.simpleicons.org/figma", className: "figma" },
+  { name: "Flutter", icon: "https://cdn.simpleicons.org/flutter", className: "flutter" },
+  { name: "Adobe", icon: "https://cdn.simpleicons.org/adobe/ffffff", className: "adobe" },
+  { name: "Java", icon: "https://cdn.simpleicons.org/coffeescript", className: "java" },
+  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/ffffff", className: "mongo" },
 ];
 
 const Engines = () => {
@@ -40,7 +40,7 @@ const Engines = () => {
         <div className="engines-icons">
           {icons.map((icon) => (
             <div className={`engine-icon ${icon.className}`} key={icon.name}>
-              <span>{icon.text}</span>
+              <img src={icon.icon} alt={icon.name} className="engine-logo" />
             </div>
           ))}
         </div>

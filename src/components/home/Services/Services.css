@@ -30,11 +30,14 @@
 .services-title-box h2::after {
   content: "";
   display: block;
-  width: 122px;
+  width: 200px;
   height: 3px;
   background:red;
   margin-top: -6px;
   margin-left: 156px;
+  transform: rotate(-3.5deg);
+  transform-origin: left center;
+    border-radius: 50px;
 }
 
 .services-title-box p {
