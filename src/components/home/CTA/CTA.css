@@ -1,0 +1,159 @@
+.cta-section {
+  width: 100%;
+  min-height: 334px;
+  background: #070116;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-content {
+    margin-top: 50px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 50px;
+}
+
+.cta-content p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-content button {
+  width: 160px;
+  height: 40px;
+  margin-top: 21px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(180deg, #7034f4 0%, #4a22b9 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-orbit {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.cta-orbit::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  z-index: -1;
+}
+
+.cta-orbit-left-top {
+  left: calc(50% - 585px);
+  top: 122px;
+  color: #f2c12e;
+}
+
+.cta-orbit-left-top::after {
+  right: -10px;
+  top: 8px;
+  transform: rotate(25deg);
+}
+
+.cta-orbit-left-bottom {
+  left: calc(50% - 580px);
+  top: 195px;
+  color: #22d44f;
+}
+
+.cta-orbit-left-bottom::after {
+  right: -10px;
+  bottom: -4px;
+  transform: rotate(25deg);
+}
+
+.cta-orbit-top {
+  left: 50%;
+  top: 38px;
+  transform: translateX(-50%);
+  color: #2f7eff;
+}
+
+.cta-orbit-top::after {
+  left: 6px;
+  bottom: -10px;
+  transform: rotate(65deg);
+}
+
+.cta-orbit-right-top {
+  right: calc(50% - 585px);
+  top: 122px;
+  color: #6a35f2;
+}
+
+.cta-orbit-right-top::after {
+  left: -8px;
+  top: 4px;
+  transform: rotate(205deg);
+}
+
+.cta-orbit-right-mid {
+  right: calc(50% - 580px);
+  top: 195px;
+  color: #f19a22;
+}
+
+.cta-orbit-right-mid::after {
+  left: -9px;
+  top: -3px;
+  transform: rotate(205deg);
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    min-height: 334px;
+    padding: 0 22px;
+  }
+
+  .cta-content {
+    width: 100%;
+    max-width: 455px;
+  }
+
+  .cta-content p {
+    font-size: 12px;
+  }
+
+  .cta-orbit-left-top {
+    left: 18px;
+  }
+
+  .cta-orbit-left-bottom {
+    left: 18px;
+  }
+
+  .cta-orbit-right-top {
+    right: 18px;
+  }
+
+  .cta-orbit-right-mid {
+    right: 18px;
+  }
+}
