@@ -1,0 +1,213 @@
+.maverick-way-section {
+  width: 100%;
+  min-height: 620px;
+  background: #070116;
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0 90px;
+  box-sizing: border-box;
+}
+
+.maverick-way-content {
+  width: 1194px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.maverick-way-heading {
+  position: relative;
+}
+
+/* .maverick-way-heading::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -54px;
+  transform: translateX(-50%) rotate(-28deg);
+  color: rgba(80, 129, 255, 0.95);
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 900;
+  opacity: 0.9;
+} */
+
+.maverick-way-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.maverick-way-heading p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.maverick-process-row {
+  width: 1194px;
+  margin: 58px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.maverick-process-card {
+  width: 100%;
+  height: 323px;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.maverick-process-card.active {
+  background: #5f2eea;
+}
+
+.maverick-card-data {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 36px 30px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.maverick-card-data h3 {
+  margin: 0;
+  color: #050505;
+  font-size: 30px;
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+
+.maverick-card-data h3 span {
+  display: block;
+}
+
+.maverick-process-card.active .maverick-card-data h3 {
+  color: #ffffff;
+}
+
+.maverick-card-number {
+  position: absolute;
+  top: 36px;
+  right: 34px;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background: rgba(103, 50, 239, 0.13);
+  color: rgba(69, 45, 102, 0.6);
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maverick-process-card.active .maverick-card-number {
+  background: #ffffff;
+  color: #111111;
+  font-size: 34px;
+}
+
+.maverick-card-data p {
+  width: 290px;
+  margin: 118px 0 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.maverick-process-card.active .maverick-card-data p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.maverick-way-bg-left,
+.maverick-way-bg-right {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.055);
+  font-size: 360px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.maverick-way-bg-left {
+  left: -120px;
+  bottom: -95px;
+  transform: rotate(-28deg);
+}
+
+.maverick-way-bg-right {
+  right: -90px;
+  top: -115px;
+  transform: rotate(28deg);
+}
+
+@media (max-width: 1300px) {
+  .maverick-way-content,
+  .maverick-process-row {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 768px) {
+  .maverick-way-section {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .maverick-way-content,
+  .maverick-process-row {
+    width: calc(100% - 40px);
+  }
+
+  .maverick-way-heading h2 {
+    font-size: 24px;
+  }
+
+  .maverick-way-heading p {
+    font-size: 10px;
+  }
+
+
+  .maverick-process-row {
+    margin-top: 36px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .maverick-process-card {
+    height: 260px;
+    border-radius: 24px;
+  }
+
+  .maverick-card-data {
+    padding: 30px 28px;
+  }
+
+  .maverick-card-data h3 {
+    font-size: 25px;
+  }
+
+  .maverick-card-number {
+    top: 28px;
+    right: 28px;
+  }
+
+  .maverick-card-data p {
+    width: 80%;
+    margin-top: 90px;
+    font-size: 15px;
+  }
+}

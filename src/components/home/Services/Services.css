@@ -22,8 +22,9 @@
   color: #ffffff;
   font-size: 48px;
   line-height: 1.08;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -1.3px;
+  font-family: "Poppins", sans-serif;
 }
 
 .services-title-box h2::after {
@@ -37,12 +38,13 @@
 }
 
 .services-title-box p {
-  width: 520px;
+  width: 820px;
   margin-top: 18px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.75;
   font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 .services-list {
@@ -52,8 +54,8 @@
 }
 
 .service-card {
- width: 1250px;
-  height: 90px;
+ width: 1352px;
+  height: 120px;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -63,7 +65,7 @@
 }
 
 .service-card:hover {
-  height: 157px;
+  height: 167px;
 }
 
 .service-card-text {
@@ -85,7 +87,7 @@
 .service-card-text h3 {
   margin: 0;
   color: #ffffff;
-  font-size: 19px;
+  font-size: 40px;
   line-height: 1;
   font-weight: 500;
 }
@@ -103,12 +105,13 @@
 }
 
 .service-card-text p {
-  width: 100%;
+  width: 939px;
   margin: 17px 0 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   font-weight: 400;
+  font-family: "Poppins", sans-serif;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.28s ease, transform 0.28s ease;
@@ -121,7 +124,7 @@
 
 .service-card-image-wrap {
   width: 260px;
-  height: 260px;
+  height: 290px;
   position: absolute;
   right: -45px;
   top: -44px;

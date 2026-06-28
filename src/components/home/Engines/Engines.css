@@ -1,0 +1,216 @@
+.engines-section {
+  width: 100%;
+  min-height: 430px;
+  background: #070116;
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 80px;
+  box-sizing: border-box;
+}
+
+.engines-container {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.engines-left {
+  width: 420px;
+}
+
+.engines-left h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.engines-left h2::after {
+  content: "";
+  display: block;
+  width: 155px;
+  height: 3px;
+  background: hsl(0, 100%, 58%);
+  margin-top: -8px;
+  margin-left: 82px;
+}
+
+.engines-left p {
+  margin: 38px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.engines-icons {
+  width: 560px;
+  height: 320px;
+  position: relative;
+}
+
+.engine-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 15px;
+  background: #ffffff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.engine-icon span {
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.framer {
+  left: 70px;
+  top: 25px;
+  transform: rotate(12deg);
+  background: linear-gradient(145deg, #00d5ff, #1d36ff);
+  color: #ffffff;
+}
+
+.python {
+  left: 190px;
+  top: 0;
+  transform: rotate(-15deg);
+  color: #3472a6;
+}
+
+.react {
+  left: 325px;
+  top: 40px;
+  transform: rotate(13deg);
+  color: #00bcd4;
+}
+
+.js {
+  right: 35px;
+  top: 10px;
+  transform: rotate(38deg);
+  color: #d5a400;
+}
+
+.shopify {
+  left: 86px;
+  top: 165px;
+  transform: rotate(19deg);
+  color: #79b744;
+}
+
+.figma {
+  left: 235px;
+  top: 135px;
+  transform: rotate(0deg);
+  color: #ff5a5f;
+}
+
+.flutter {
+  right: 35px;
+  top: 120px;
+  transform: rotate(0deg);
+  color: #29b6f6;
+}
+
+.adobe {
+  left: 190px;
+  bottom: 0;
+  transform: rotate(-17deg);
+  background: #ff1f10;
+  color: #ffffff;
+}
+
+.java {
+  left: 335px;
+  bottom: 16px;
+  transform: rotate(0deg);
+  color: #e53935;
+}
+
+.mongo {
+  right: 15px;
+  bottom: 45px;
+  transform: rotate(-18deg);
+  background: #31b84b;
+  color: #ffffff;
+}
+
+.engines-bg-mark {
+  position: absolute;
+  left: -110px;
+  top: 45px;
+  color: rgba(255, 255, 255, 0.055);
+  font-size: 330px;
+  line-height: 1;
+  font-weight: 900;
+  transform: rotate(-28deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  .engines-container {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 900px) {
+  .engines-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+  }
+
+  .engines-left {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .engines-icons {
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .engines-section {
+    padding: 55px 0 65px;
+  }
+
+  .engines-container {
+    width: calc(100% - 40px);
+  }
+
+  .engines-left h2 {
+    font-size: 28px;
+  }
+
+  .engines-left h2::after {
+    width: 108px;
+    height: 2px;
+    margin-left: 55px;
+    margin-top: -5px;
+  }
+
+  .engines-left p {
+    margin-top: 26px;
+    font-size: 11px;
+  }
+
+  .engines-icons {
+    height: 260px;
+    transform: scale(0.78);
+    transform-origin: top left;
+  }
+}

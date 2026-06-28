@@ -12,7 +12,8 @@
 .cta-content {
     margin-top: 50px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 850px;
+  height: 192px;
   text-align: center;
   position: relative;
   z-index: 3;
