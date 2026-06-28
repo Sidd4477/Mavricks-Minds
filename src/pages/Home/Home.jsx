@@ -6,6 +6,7 @@ import Services from "../../components/home/Services/Services";
 import CTA from "../../components/home/CTA/CTA";
 import MaverickWay from "../../components/home/MaverickWay/MaverickWay";
 import Engines from "../../components/home/Engines/Engines";
+import Testimonials from "../../components/home/Testimonials/Testimonials";
 const Home = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const Home = () => {
       <CTA />
       <MaverickWay />
       <Engines />
+      <Testimonials />
     </>
   );
 };
