@@ -10,6 +10,7 @@ import Testimonials from "../../components/home/Testimonials/Testimonials";
 import CollaborateCTA from "../../components/home/CollaborateCTA/CollaborateCTA";
 import FAQ from "../../components/home/FAQ/FAQ";
 import Footer from "../../components/layout/Footer/Footer";
+import Chatbot from "../../components/common/Chatbot/Chatbot";
 const Home = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const Home = () => {
       <CollaborateCTA />
       <FAQ />
       <Footer />
+      <Chatbot />
     </>
   );
 };
