@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Chatbot.css";
 
-const WHATSAPP_NUMBER = "7050955306"; // yaha apna WhatsApp number daalna
+const WHATSAPP_NUMBER = "+919855981629"; // yaha apna WhatsApp number daalna
 
 const services = {
   website: {
