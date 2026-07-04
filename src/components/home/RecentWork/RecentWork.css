@@ -76,8 +76,8 @@
 }
 
 .work-card {
-  width: 480px;
-  height: 595px;
+  width: 520px;
+  height: 620px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -103,7 +103,7 @@
 }
 
 .work-image-wrap {
-  width: 100%;
+  width: 105%;
   height: 318px;
   overflow: hidden;
   border-radius: 4px;

@@ -95,7 +95,7 @@ const RecentWork = () => {
           x: 0,
           y: -52,
           z: 140,
-          scale: 0.72,
+          scale: 0.65,
           rotationZ: 0,
           rotationY: 0,
         };

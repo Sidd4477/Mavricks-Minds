@@ -7,27 +7,115 @@
 
 .footer-box {
   width: 100%;
-  height: 480px;
-  background: radial-gradient(circle at center, #1d2638 0%, #070116 68%);
   position: relative;
   overflow: hidden;
-  padding-top: 35px;
-  box-sizing: border-box;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  min-height: 620px;
+  background: #080318;
+}
+
+/* main bg */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse 72% 85% at 50% 34%,
+      rgba(118, 118, 126, 0.95) 0%,
+      rgba(82, 82, 92, 0.78) 28%,
+      rgba(43, 43, 54, 0.48) 54%,
+      rgba(12, 9, 28, 0.65) 78%,
+      rgba(8, 3, 24, 1) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #09031a 0%,
+      #0a041d 40%,
+      #080318 100%
+    );
+}
+
+/* dark corners */
+.footer-dark-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(0, 0, 0, 0.28) 62%,
+      rgba(0, 0, 0, 0.78) 100%
+    );
+}
+
+/* bottom soft fade */
+.footer-bottom-fade {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 260px;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(8, 3, 24, 0.85),
+    rgba(18, 15, 38, 0.42),
+    transparent
+  );
+}
+
+.footer-bg-text {
+  position: absolute;
+  left: 50%;
+  bottom: -88px;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.08);
+  font-size: 210px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 35%,
+    rgba(0, 0, 0, 0.65) 65%,
+    rgba(0, 0, 0, 1) 95%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 35%,
+    rgba(0, 0, 0, 0.65) 65%,
+    rgba(0, 0, 0, 1) 95%
+  );
+}
+
+.footer-content {
+  position: relative;
+  z-index: 10;
+  padding: 56px 80px 40px;
+  color: #ffffff;
 }
 
 .footer-brand {
   width: fit-content;
-  margin: 0 auto 26px;
+  margin: 0 auto 34px;
   display: flex;
   align-items: center;
   gap: 7px;
-  position: relative;
-  z-index: 4;
 }
 
 .footer-brand-icon {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   display: block;
 }
@@ -39,7 +127,7 @@
 
 .footer-brand-name {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1;
   font-weight: 400;
   letter-spacing: -0.6px;
@@ -59,99 +147,91 @@
   text-align: right;
 }
 
-.footer-box h2 {
-  margin: 0;
-  color: #ffffff;
+.footer-cta {
   text-align: center;
-  font-size: 44px;
-  line-height: 1.15;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  z-index: 4;
+  margin-bottom: 70px;
 }
 
-.footer-box h2::after {
-  content: "";
-  width: 135px;
-  height: 2px;
-  background: #df062e;
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  transform: translateX(8px) rotate(-3deg);
-  border-radius: 50px;
+.footer-cta p {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-cta h2 {
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 600;
 }
 
 .footer-btn {
-  width: 162px;
-  height: 44px;
-  border: none;
-  border-radius: 30px;
-  background: #ffffff;
-  color: #070116;
-  font-size: 14px;
-  font-weight: 500;
   cursor: pointer;
-  display: block;
-  margin: 29px auto 0;
-  position: relative;
-  z-index: 4;
+  color: #ffffff;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 22px rgba(255, 255, 255, 0.28);
+}
+
+.footer-btn span {
+  margin-left: 18px;
+  font-size: 18px;
 }
 
 .footer-links {
-  width: 595px;
-  margin: 50px auto 0;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 4;
-}
-
-.footer-col {
-  width: 120px;
+  max-width: 720px;
+  margin: 0 auto 55px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px;
 }
 
 .footer-col h4 {
-  margin: 0 0 13px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 20px;
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
   line-height: 1;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
 }
 
 .footer-col p {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.footer-socials span {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
   line-height: 1;
   font-weight: 500;
 }
 
-.footer-bg-text {
-  position: absolute;
-  left: 34px;
-  right: 0;
-  bottom: -42px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.075);
-  font-size: 300px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -7px;
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-  z-index: 1;
-}
-
 .footer-bottom {
-  position: absolute;
-  left: 28px;
-  right: 34px;
-  bottom: 14px;
-  z-index: 5;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,35 +239,46 @@
 
 .footer-bottom p {
   margin: 0;
-  color: #ffffff;
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
   line-height: 1;
   font-weight: 400;
 }
 
-.footer-socials {
+.footer-policy {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.footer-socials span {
+.footer-policy p {
   color: #ffffff;
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 500;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
   .footer-box {
-    height: auto;
-    min-height: 500px;
-    padding-top: 42px;
-    padding-bottom: 55px;
+    min-height: auto;
+  }
+
+  .footer-bg {
+    background:
+      radial-gradient(
+        ellipse 95% 70% at 50% 28%,
+        rgba(105, 105, 115, 0.75) 0%,
+        rgba(54, 54, 66, 0.48) 42%,
+        rgba(10, 5, 27, 0.92) 78%,
+        rgba(8, 3, 24, 1) 100%
+      ),
+      #080318;
+  }
+
+  .footer-content {
+    padding: 42px 20px 28px;
   }
 
   .footer-brand {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .footer-brand-icon {
@@ -203,51 +294,69 @@
     font-size: 3.5px;
   }
 
-  .footer-box h2 {
-    font-size: 22px;
+  .footer-cta {
+    margin-bottom: 56px;
   }
 
-  .footer-box h2::after {
-    width: 115px;
+  .footer-cta p {
+    font-size: 14px;
+  }
+
+  .footer-cta h2 {
+    font-size: 32px;
+    line-height: 1.15;
   }
 
   .footer-btn {
-    margin-top: 28px;
+    padding: 12px 24px;
+    font-size: 14px;
   }
 
   .footer-links {
-    width: calc(100% - 70px);
-    margin-top: 55px;
-    gap: 28px;
-    flex-wrap: wrap;
-  }
-
-  .footer-col {
-    width: calc(50% - 14px);
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    margin-bottom: 45px;
   }
 
   .footer-col h4 {
-    font-size: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
   }
 
   .footer-col p {
-    font-size: 11px;
-  }
-
-  .footer-bg-text {
-    left: 14px;
-    bottom: 40px;
-    font-size: 62px;
-    letter-spacing: -3px;
-  }
-
-  .footer-bottom {
-    left: 22px;
-    right: 22px;
-    bottom: 18px;
+    font-size: 16px;
+    margin-bottom: 14px;
   }
 
   .footer-socials {
-    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .footer-socials span {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-policy {
+    gap: 14px;
+  }
+
+  .footer-policy p {
+    font-size: 14px;
+  }
+
+  .footer-bg-text {
+    bottom: 0;
+    font-size: 50px;
+    letter-spacing: 2px;
   }
 }
