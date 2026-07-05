@@ -4,18 +4,18 @@ const processCards = [
   {
     id: "1",
     title: "Discovery\n& Strategy",
-    text: "From foundation to finish, we thoughtfully craft every step. Here’s a look at our process.",
+    text: "We understand your business, audience, and goals to craft a clear strategy that drives growth, builds trust, and delivers measurable results.",
     active: true,
   },
   {
     id: "2",
-    title: "Design\n& Experience",
-    text: "From foundation to finish, we thoughtfully craft every step. Here’s a look at our process.",
+    title: "Analysis &\nDesign",
+    text: "We study your requirements, plan the right user experience, and design a clear structure before moving into development.",
   },
   {
     id: "3",
-    title: "Development\n& Launch",
-    text: "From foundation to finish, we thoughtfully craft every step. Here’s a look at our process.",
+    title: "Get Your\nWork Done",
+    text: "From design to deployment, we build fast, scalable, and reliable digital products that help your business grow with confidence.",
   },
 ];
 

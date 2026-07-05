@@ -107,7 +107,7 @@ const RecentWork = () => {
           zIndex: 8,
           pointerEvents: "auto",
           xPercent: -50,
-          x: 490,
+          x: 450,
           y: 28,
           z: -130,
           scale: 0.72,
@@ -122,7 +122,7 @@ const RecentWork = () => {
           zIndex: 8,
           pointerEvents: "auto",
           xPercent: -50,
-          x: -490,
+          x: -450,
           y: 28,
           z: -130,
           scale: 0.72,
@@ -179,9 +179,10 @@ const RecentWork = () => {
 
   const moveNext = () => {
     if (isAnimating.current) return;
-    isAnimating.current = true;
 
+    isAnimating.current = true;
     const nextIndex = getLoopIndex(activeIndex + 1, works.length);
+
     setActiveIndex(nextIndex);
     applyPositions(nextIndex);
 
@@ -192,9 +193,10 @@ const RecentWork = () => {
 
   const movePrev = () => {
     if (isAnimating.current) return;
-    isAnimating.current = true;
 
+    isAnimating.current = true;
     const prevIndex = getLoopIndex(activeIndex - 1, works.length);
+
     setActiveIndex(prevIndex);
     applyPositions(prevIndex);
 
@@ -216,11 +218,24 @@ const RecentWork = () => {
         </div>
 
         <div className="recent-work-arrows">
-          <button onClick={movePrev} aria-label="Previous Work">
-            ‹
+          <button
+            className="recent-work-arrow-circle recent-work-arrow-prev-circle"
+            onClick={movePrev}
+            aria-label="Previous Work"
+          >
+            <span className="recent-work-arrow-symbol recent-work-arrow-prev-symbol">
+              ‹
+            </span>
           </button>
-          <button onClick={moveNext} aria-label="Next Work">
-            ›
+
+          <button
+            className="recent-work-arrow-circle recent-work-arrow-next-circle"
+            onClick={moveNext}
+            aria-label="Next Work"
+          >
+            <span className="recent-work-arrow-symbol recent-work-arrow-next-symbol">
+              ›
+            </span>
           </button>
         </div>
       </div>
@@ -245,11 +260,15 @@ const RecentWork = () => {
 
               <div className="work-info">
                 <h3>{item.title}</h3>
-                <p>
-                  Category : <span>{item.category}</span>
+
+                <p className="work-meta-row">
+                  <span className="work-meta-label">Category :</span>{" "}
+                  <span className="work-meta-value">{item.category}</span>
                 </p>
-                <p>
-                  Timeline : <span>{item.timeline}</span>
+
+                <p className="work-meta-row">
+                  <span className="work-meta-label">Timeline :</span>{" "}
+                  <span className="work-meta-value">{item.timeline}</span>
                 </p>
               </div>
             </div>

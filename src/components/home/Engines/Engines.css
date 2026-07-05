@@ -25,7 +25,7 @@
 .engines-left h2 {
   margin: 0;
   color: #ffffff;
-  font-size: 50px;
+  font-size: 54px;
   line-height: 1.08;
   font-weight: 500;
   letter-spacing: -1px;
@@ -35,7 +35,7 @@
 .engines-left h2::after {
   content: "";
   display: block;
-  width: 200px;
+  width: 180px;
   height: 3px;
   background: hsl(0, 100%, 58%);
   margin-top: -55px;
@@ -46,24 +46,27 @@
 }
 
 .engines-left p {
- 
   margin-top: 84px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   font-weight: 400;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
+}
+
+.engines-left p span {
+  color: #7b4dff;
 }
 
 .engines-icons {
-  width: 560px;
+  width: 600px;
   height: 320px;
   position: relative;
 }
 
 .engine-icon {
-  width: 72px;
-  height: 72px;
+  width: 90px;
+  height: 90px;
   border-radius: 15px;
   background: #ffffff;
   position: absolute;
@@ -74,47 +77,74 @@
 }
 
 .engine-logo {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   display: block;
 }
 
 .framer {
-  left: 70px;
-  top: 25px;
+  left: 35px;
+  top: 35px;
   transform: rotate(12deg);
   background: linear-gradient(145deg, #00d5ff, #1d36ff);
 }
 
 .python {
-  left: 190px;
+  left: 205px;
   top: 0;
   transform: rotate(-15deg);
 }
 
+.python .engine-logo {
+  width: 90px;
+  height: 90px;
+}
+
 .react {
-  left: 325px;
-  top: 40px;
+  left: 355px;
+  top: 65px;
   transform: rotate(13deg);
 }
 
+.react .engine-logo {
+  width: 90px;
+  height: 90px;
+}
+
 .js {
-  right: 35px;
-  top: 10px;
+  right: 5px;
+  top: 8px;
   transform: rotate(38deg);
 }
 
+.js .engine-logo {
+  width: 115px;
+  height: 115px;
+  border-radius: 42px;
+}
+
 .shopify {
-  left: 86px;
-  top: 165px;
+  left: 50px;
+  top: 178px;
   transform: rotate(19deg);
 }
 
+.shopify .engine-logo {
+  width: 115px;
+  height: 115px;
+}
+
 .figma {
-  left: 235px;
-  top: 135px;
+  left: 215px;
+  top: 145px;
   transform: rotate(0deg);
+  background-color: black;
+}
+
+.figma .engine-logo {
+  width: 90px;
+  height: 90px;
 }
 
 .flutter {
@@ -123,24 +153,40 @@
   transform: rotate(0deg);
 }
 
+.flutter .engine-logo {
+  width: 90px;
+  height: 90px;
+}
+
 .adobe {
   left: 190px;
-  bottom: 0;
+  bottom: -10px;
   transform: rotate(-17deg);
   background: #ff1f10;
 }
 
 .java {
-  left: 335px;
-  bottom: 16px;
+  left: 355px;
+  bottom: 12px;
   transform: rotate(0deg);
+}
+
+.java .engine-logo {
+  width: 90px;
+  height: 90px;
 }
 
 .mongo {
   right: 15px;
-  bottom: 45px;
-  transform: rotate(-18deg);
+  bottom: 20px;
+  transform: rotate(-28deg);
   background: #31b84b;
+  z-index: 5;
+}
+
+.mongo .engine-logo {
+  width: 90px;
+  height: 90px;
 }
 
 .engines-bg-mark {
@@ -176,7 +222,7 @@
 
   .engines-icons {
     width: 100%;
-    max-width: 560px;
+    max-width: 600px;
   }
 }
 

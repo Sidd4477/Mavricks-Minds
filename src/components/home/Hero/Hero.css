@@ -2,13 +2,27 @@
   width: 100%;
   background: #050012;
   overflow: hidden;
-
   padding: 132px 0 88px;
 }
 
 .hero-content {
   width: 900px;
   margin: 0 auto;
+}
+
+.hero-title-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-title-line {
+  width: 2px;
+  height: 38px;
+  background: #ffffff;
+  flex-shrink: 0;
+  margin-right: 18px;
+  margin-top: 38px;
 }
 
 .hero-content h1 {
@@ -22,15 +36,7 @@
   font-family: poppins, sans-serif;
   width: 106%;
   height: 100%;
-}
-
-.title-line {
-  display: inline-block;
-  width: 2px;
-  height: 38px;
-  background: #ffffff;
-  margin-right: 18px;
-  transform: translateY(6px);
+  margin-top:30px;
 }
 
 .red-underline {
@@ -40,13 +46,13 @@
   border-bottom: 4px solid #ff3d4d;
   border-radius: 50%;
   top: 50px;
-  right: 137px;
+  right: 100px;
   transform: rotate(-14deg);
 }
 
 .hero-content p {
   width: 620px;
-  margin: 22px 0 22px 67px;
+  margin: 22px 0 22px 27px;
   color: #ffffff;
   font-size: 16px;
   line-height: 1.55;
@@ -56,7 +62,7 @@
 }
 
 .hero-actions {
-  margin-left: 67px;
+  margin-left: 27px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -221,9 +227,10 @@
     letter-spacing: -1px;
   }
 
-  .title-line {
+  .hero-title-line {
     height: 30px;
     margin-right: 10px;
+    margin-top: 5px;
   }
 
   .red-underline {

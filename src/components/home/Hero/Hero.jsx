@@ -14,6 +14,7 @@ import companyLogo5 from "../../../assets/images/logos/Company Logo5.png.png";
 
 const Hero = () => {
   const heroImages = [hero1, hero2, hero3, hero4];
+
   const companyLogos = [
     companyLogo1,
     companyLogo2,
@@ -25,13 +26,16 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1>
-          <span className="title-line"></span>
-          If You're Building Something Big,
-          <br />
-          You're In The Right Place
-          <span className="red-underline"></span>
-        </h1>
+        <div className="hero-title-wrap">
+          <span className="hero-title-line"></span>
+
+          <h1>
+            If You're Building Something Big,
+            <br />
+            You're In The Right Place
+            <span className="red-underline"></span>
+          </h1>
+        </div>
 
         <p>
           Maverick Mind Is A Global UX And Web Design Agency, Helping Brands

@@ -21,18 +21,20 @@
 
 .recent-work-top h2 {
   margin: 0 0 14px;
-  font-size: 42px;
+  font-size: 54px;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
   letter-spacing: -1px;
   color: #ffffff;
 }
 
 .recent-work-top p {
   margin: 0;
-  font-size: 11px;
+  font-size: 18px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -42,27 +44,52 @@
   gap: 12px;
 }
 
-.recent-work-arrows button {
-  width: 38px;
-  height: 38px;
+.recent-work-arrow-circle {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 1px solid #ffffff;
   background: transparent;
-  color: #ffffff;
-  font-size: 28px;
-  line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 4px;
   transition: 0.25s ease;
+  padding: 0;
+  line-height: 1;
 }
 
-.recent-work-arrows button:hover {
+.recent-work-arrow-symbol {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.recent-work-arrow-prev-symbol {
+  font-size: 38px;
+  transform: translateX(-1px) translateY(-3px);
+}
+
+.recent-work-arrow-next-symbol {
+  font-size: 38px;
+  transform: translateX(1px) translateY(-3px);
+}
+
+.recent-work-arrow-prev-circle {
+}
+
+.recent-work-arrow-next-circle {
+}
+
+/* .recent-work-arrow-circle:hover {
   background: #ffffff;
   color: #060014;
-}
+} */
 
 .recent-work-stage {
   width: 100%;
@@ -76,8 +103,8 @@
 }
 
 .work-card {
-  width: 520px;
-  height: 620px;
+  width:  480px;
+  height: 580px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -103,28 +130,30 @@
 }
 
 .work-image-wrap {
-  width: 105%;
-  height: 318px;
+  width: 100%;
+  height: 340px;              /* 318 -> 340 */
   overflow: hidden;
   border-radius: 4px;
   background: #ffffff;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  padding: 1px;               /* 14px -> 4px */
+  box-sizing: border-box;
 }
 
 .work-image-wrap img {
-  width: 108%;
-  height: 108%;
-  object-fit: cover;
-  object-position: top center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   display: block;
   transition: transform 0.8s ease;
+  transform: scale(1.08);     /* Image thodi badi lagegi */
 }
-
 /* .work-image-wrap.center-image img {
-  transform: translateY(-18px); */
-
+  transform: translateY(-18px);
+} */
 
 .work-info {
   margin-top: 28px;
@@ -133,24 +162,39 @@
 
 .work-info h3 {
   margin: 0 0 15px;
-  font-size: 22px;
+
+  font-size: 36px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 400;
   color: #171717;
   letter-spacing: -0.3px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 45px;
 }
 
 .work-info p {
-  margin: 5px 0;
-  font-size: 11px;
-  line-height: 1.35;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.45);
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Poppins;
+  line-height: 0.7;
+  font-weight: 300;
+  color: black;
 }
 
-.work-info p span {
-  color: #171717;
-  font-weight: 500;
+.work-meta-row {
+  color: #777777;
+}
+
+.work-meta-label {
+  color: #777777;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+.work-meta-value {
+  color: #777777;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 1200px) {
@@ -159,7 +203,7 @@
   }
 
   .work-card {
-    width: 480px;
+    width:  480px;
     height: 595px;
   }
 }
@@ -182,10 +226,15 @@
     font-size: 10px;
   }
 
-  .recent-work-arrows button {
+  .recent-work-arrow-circle {
     width: 34px;
     height: 34px;
+  }
+
+  .recent-work-arrow-prev-symbol,
+  .recent-work-arrow-next-symbol {
     font-size: 24px;
+    transform: translateY(-2px);
   }
 
   .recent-work-stage {

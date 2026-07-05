@@ -28,20 +28,49 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(null);
+  const [direction, setDirection] = useState("next");
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const handlePrev = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+  const changeTestimonial = (type) => {
+    if (isAnimating) return;
+
+    const newIndex =
+      type === "next"
+        ? activeIndex === testimonials.length - 1
+          ? 0
+          : activeIndex + 1
+        : activeIndex === 0
+        ? testimonials.length - 1
+        : activeIndex - 1;
+
+    setDirection(type);
+    setNextIndex(newIndex);
+    setIsAnimating(true);
+
+    setTimeout(() => {
+      setActiveIndex(newIndex);
+      setNextIndex(null);
+      setIsAnimating(false);
+    }, 420);
   };
 
-  const handleNext = () => {
-    setActiveIndex((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
-  };
+  const renderCard = (testimonial, className = "") => (
+    <div className={`testimonial-card ${className}`}>
+      <img src={testimonialBox} alt="" className="testimonial-card-bg" />
 
-  const activeTestimonial = testimonials[activeIndex];
+      <div className="testimonial-card-content">
+        <p>{testimonial.text}</p>
+
+        <div className="testimonial-author">
+          <h4>{testimonial.name}</h4>
+          <span>{testimonial.role}</span>
+        </div>
+
+        <span className="testimonial-quote">”</span>
+      </div>
+    </div>
+  );
 
   return (
     <section className="testimonials-section">
@@ -50,49 +79,46 @@ const Testimonials = () => {
           <h2>Loved By Businesses Worldwide</h2>
         </div>
 
-       <button
-  type="button"
-  className="testimonial-arrow testimonial-arrow-left"
-  onClick={handlePrev}
->
-  <span className="testimonial-arrow-icon">&#8249;</span>
-</button>
-
-<button
-  type="button"
-  className="testimonial-arrow testimonial-arrow-right"
-  onClick={handleNext}
->
-  <span className="testimonial-arrow-icon">&#8250;</span>
-</button>
-
-        <div className="testimonial-card">
-          <img
-            src={testimonialBox}
-            alt=""
-            className="testimonial-card-bg"
-          />
-
-          <div className="testimonial-card-content">
-            <p>{activeTestimonial.text}</p>
-
-            <div className="testimonial-author">
-              <h4>{activeTestimonial.name}</h4>
-              <span>{activeTestimonial.role}</span>
-            </div>
-
-            <span className="testimonial-quote">”</span>
-          </div>
-        </div>
+        <button
+          type="button"
+          className="testimonial-arrow-btn testimonial-arrow-left"
+          onClick={() => changeTestimonial("prev")}
+          aria-label="Previous testimonial"
+        >
+          <span className="testimonial-arrow-circle">
+            <span className="testimonial-arrow-icon">&#8249;</span>
+          </span>
+        </button>
 
         <button
           type="button"
-          className="testimonial-arrow testimonial-arrow-right"
-          onClick={handleNext}
+          className="testimonial-arrow-btn testimonial-arrow-right"
+          onClick={() => changeTestimonial("next")}
           aria-label="Next testimonial"
         >
-          &#8250;
+          <span className="testimonial-arrow-circle">
+            <span className="testimonial-arrow-icon">&#8250;</span>
+          </span>
         </button>
+
+        <div className="testimonial-slider">
+          {renderCard(
+            testimonials[activeIndex],
+            isAnimating
+              ? direction === "next"
+                ? "testimonial-card-exit-left"
+                : "testimonial-card-exit-right"
+              : ""
+          )}
+
+          {isAnimating &&
+            renderCard(
+              testimonials[nextIndex],
+              direction === "next"
+                ? "testimonial-card-enter-right"
+                : "testimonial-card-enter-left"
+            )}
+        </div>
       </div>
     </section>
   );

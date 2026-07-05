@@ -11,6 +11,8 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  padding: 0 32px;
+  box-sizing: border-box;
 }
 
 .services-title-box {
@@ -20,7 +22,7 @@
 .services-title-box h2 {
   margin: 0;
   color: #ffffff;
-  font-size: 48px;
+  font-size: 54px;
   line-height: 1.08;
   font-weight: 500;
   letter-spacing: -1.3px;
@@ -32,19 +34,19 @@
   display: block;
   width: 200px;
   height: 3px;
-  background:red;
+  background: red;
   margin-top: -6px;
   margin-left: 156px;
   transform: rotate(-3.5deg);
   transform-origin: left center;
-    border-radius: 50px;
+  border-radius: 50px;
 }
 
 .services-title-box p {
   width: 820px;
-  margin-top: 18px;
+  margin-top: 20px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.75;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
@@ -57,18 +59,20 @@
 }
 
 .service-card {
- width: 1352px;
-  height: 120px;
-  border-radius: 12px;
+  width: 100%;
+  height: 140px;
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   background: linear-gradient(90deg, #7034f4 0%, #622ee7 55%, #4d22bd 100%);
   transition: height 0.35s ease, border-radius 0.35s ease;
+  margin: 10px 0 -4px;
+  box-sizing: border-box;
 }
 
 .service-card:hover {
-  height: 167px;
+  height: 197px;
 }
 
 .service-card-text {
@@ -82,17 +86,19 @@
 .service-card-text span {
   display: block;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 10px;
+  font-size: 18px;
   line-height: 1;
   margin-bottom: 11px;
+  margin-top: 6px;
 }
 
 .service-card-text h3 {
   margin: 0;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 46px;
   line-height: 1;
   font-weight: 500;
+  margin-top: 12px;
 }
 
 .service-card-line {
@@ -138,17 +144,20 @@
   transform: none;
   transition: opacity 0.3s ease;
 }
+
 .service-card:hover .service-card-image-wrap {
   opacity: 1;
 }
+
 .service-card-image {
-  width: 140px;
-  height: 230px;
+  width: 160px;
+  height: 260px;
   display: block;
   object-fit: contain;
   border-radius: 29px;
   transform: rotate(3deg) translate(12px, 8px);
   transform-origin: center center;
+  margin-top: 7px;
 }
 
 .services-bg-icon {
@@ -175,11 +184,14 @@
 
 @media (max-width: 1400px) {
   .services-content {
-    width: calc(100% - 56px);
+    width: 100%;
+    padding: 0 32px;
+    box-sizing: border-box;
   }
 
   .service-card {
     width: 100%;
+    margin: 10px 0 -4px;
   }
 }
 
@@ -189,7 +201,9 @@
   }
 
   .services-content {
-    width: calc(100% - 54px);
+    width: 100%;
+    padding: 0 27px;
+    box-sizing: border-box;
   }
 
   .services-title-box {
@@ -221,8 +235,11 @@
   }
 
   .service-card {
+    width: 100%;
     height: 43px;
     border-radius: 5px;
+    margin: 10px 0 0;
+    box-sizing: border-box;
   }
 
   .service-card:hover {

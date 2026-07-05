@@ -36,17 +36,19 @@
 .maverick-way-heading h2 {
   margin: 0;
   color: #ffffff;
-  font-size: 38px;
+  font-size: 54px;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 .maverick-way-heading p {
   margin: 12px 0 0;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.45;
   font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 .maverick-process-row {
@@ -58,8 +60,8 @@
 }
 
 .maverick-process-card {
-  width: 100%;
-  height: 323px;
+  width: 90%;
+  height: 280px;
   border-radius: 32px;
   position: relative;
   overflow: hidden;
@@ -87,6 +89,7 @@
   line-height: 1.08;
   font-weight: 500;
   letter-spacing: -0.4px;
+  min-height: 66px;
 }
 
 .maverick-card-data h3 span {
@@ -104,25 +107,27 @@
   width: 51px;
   height: 51px;
   border-radius: 50%;
-  background: rgba(103, 50, 239, 0.13);
-  color: rgba(69, 45, 102, 0.6);
-  font-size: 21px;
+  background: linear-gradient(135deg, #e2dddd 0%, #ffffff 100%);
+  color: #4e4b4b;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .maverick-process-card.active .maverick-card-number {
-  background: #ffffff;
+  background: #f1eeee;
   color: #111111;
-  font-size: 34px;
+  font-size: 24px;
 }
 
 .maverick-card-data p {
   width: 290px;
-  margin: 118px 0 0;
+  margin: 50px 0 0;
   color: rgba(0, 0, 0, 0.7);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.35;
   font-weight: 400;
 }
@@ -180,7 +185,6 @@
     font-size: 10px;
   }
 
-
   .maverick-process-row {
     margin-top: 36px;
     grid-template-columns: 1fr;
@@ -198,16 +202,22 @@
 
   .maverick-card-data h3 {
     font-size: 25px;
+    min-height: 54px;
   }
 
   .maverick-card-number {
     top: 28px;
     right: 28px;
+    font-size: 22px;
+  }
+
+  .maverick-process-card.active .maverick-card-number {
+    font-size: 22px;
   }
 
   .maverick-card-data p {
     width: 80%;
-    margin-top: 90px;
+    margin-top: 54px;
     font-size: 15px;
   }
 }
