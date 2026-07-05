@@ -28,11 +28,11 @@ const Footer = () => {
           </div>
 
           <div className="footer-cta">
-            <p>Need help with a project ?</p>
             <h2>Why Sleep On A Great Idea?</h2>
 
             <button type="button" className="footer-btn">
-              Get in Touch <span>→</span>
+              <span className="footer-btn-text">Book A Free 30 Min Call</span>
+              <span className="footer-btn-icon">↗</span>
             </button>
           </div>
 

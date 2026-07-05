@@ -55,9 +55,9 @@
 ========================= */
 
 .collaborate-card {
-  width: 1220px;
+   width: 1220px;
   height: 232px;
-  margin: 0 auto;
+  margin: 100px auto;
   border-radius: 32px;
   background: linear-gradient(
     135deg,
