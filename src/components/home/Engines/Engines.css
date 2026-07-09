@@ -9,8 +9,11 @@
 }
 
 .engines-container {
-  width: 1180px;
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 32px;
   margin: 0 auto;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -204,7 +207,10 @@
 
 @media (max-width: 1200px) {
   .engines-container {
-    width: calc(100% - 60px);
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 32px;
+    box-sizing: border-box;
   }
 }
 
@@ -232,7 +238,9 @@
   }
 
   .engines-container {
-    width: calc(100% - 40px);
+    width: 100%;
+    padding: 0 27px;
+    box-sizing: border-box;
   }
 
   .engines-left h2 {

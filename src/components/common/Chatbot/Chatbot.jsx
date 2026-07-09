@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Chatbot.css";
 
-const WHATSAPP_NUMBER = "+919855981629"; // yaha apna WhatsApp number daalna
+import chatbotAvatar from "../../../assets/images/logos/Customer Service Day.png";
+
+const WHATSAPP_NUMBER = "919855981629";
 
 const services = {
   website: {
@@ -16,18 +18,44 @@ const services = {
   },
   erp: {
     title: "ERP Software",
-    text: "We build custom ERP systems for inventory, billing, CRM, staff management, reports, and automation.",
+    text: "We build custom ERP systems for inventory, billing, CRM, staff management, reports and automation.",
     price: "Custom quotation after requirement discussion.",
   },
   uiux: {
     title: "UI/UX Design",
-    text: "We design clean, premium, and user-friendly interfaces for websites, apps, and dashboards.",
+    text: "We design clean, premium and modern UI/UX for websites and mobile apps.",
     price: "Starting from ₹10,000",
   },
 };
 
+const leadQuestions = [
+  {
+    key: "name",
+    question: "Great! Before we begin, what's your name?",
+  },
+  {
+    key: "phone",
+    question: "Please share your phone number.",
+  },
+  {
+    key: "budget",
+    question: "What's your approximate budget?",
+  },
+  {
+    key: "timeline",
+    question: "When are you planning to start?",
+  },
+  {
+    key: "description",
+    question: "Please describe your project briefly.",
+  },
+];
+
 const Chatbot = () => {
+  const bodyRef = useRef(null);
+
   const [open, setOpen] = useState(false);
+
   const [messages, setMessages] = useState([
     {
       sender: "bot",
@@ -36,23 +64,25 @@ const Chatbot = () => {
   ]);
 
   const [leadMode, setLeadMode] = useState(false);
+
+  const [selectedService, setSelectedService] = useState(null);
+
   const [step, setStep] = useState(0);
 
   const [lead, setLead] = useState({
+    service: "",
     name: "",
     phone: "",
-    project: "",
     budget: "",
-    time: "",
+    timeline: "",
+    description: "",
   });
 
-  const leadQuestions = [
-    { key: "name", question: "Great! What is your name?" },
-    { key: "phone", question: "Please share your phone number." },
-    { key: "project", question: "What type of project do you need?" },
-    { key: "budget", question: "What is your approximate budget?" },
-    { key: "time", question: "What is your preferred meeting time?" },
-  ];
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const addMessage = (sender, text) => {
     setMessages((prev) => [...prev, { sender, text }]);
@@ -61,83 +91,120 @@ const Chatbot = () => {
   const handleServiceClick = (type) => {
     const service = services[type];
 
+    setSelectedService(type);
+
+    setLead((prev) => ({
+      ...prev,
+      service: service.title,
+    }));
+
     addMessage("user", service.title);
+
     addMessage(
       "bot",
-      `${service.text}\n\n${service.price}\n\nWould you like to discuss your project?`
-    );
-  };
+      `${service.text}
 
-  const startLeadFlow = () => {
+${service.price}
+
+Let's discuss your project.`
+    );
+
     setLeadMode(true);
     setStep(0);
-    addMessage("user", "Book Free Consultation");
-    addMessage("bot", leadQuestions[0].question);
+
+    setTimeout(() => {
+      addMessage("bot", leadQuestions[0].question);
+    }, 500);
   };
 
   const handleLeadInput = (e) => {
     e.preventDefault();
 
-    const form = e.target;
-    const value = form.message.value.trim();
+    const value = e.target.message.value.trim();
 
     if (!value) return;
 
     const currentKey = leadQuestions[step].key;
 
-    setLead((prev) => ({
-      ...prev,
+    const updatedLead = {
+      ...lead,
       [currentKey]: value,
-    }));
+    };
+
+    setLead(updatedLead);
 
     addMessage("user", value);
 
-    form.reset();
+    e.target.reset();
 
     if (step < leadQuestions.length - 1) {
-      const nextStep = step + 1;
-      setStep(nextStep);
-      addMessage("bot", leadQuestions[nextStep].question);
+      const next = step + 1;
+
+      setStep(next);
+
+      setTimeout(() => {
+        addMessage("bot", leadQuestions[next].question);
+      }, 400);
     } else {
       setLeadMode(false);
 
-      const finalLead = {
-        ...lead,
-        [currentKey]: value,
-      };
-
       addMessage(
         "bot",
-        "Thank you! Your details are ready. Click below to continue on WhatsApp."
-      );
+        `Perfect! ✅
 
-      setTimeout(() => {
-        openWhatsApp(finalLead);
-      }, 500);
+Here is your summary.
+
+Service : ${updatedLead.service}
+
+Name : ${updatedLead.name}
+
+Phone : ${updatedLead.phone}
+
+Budget : ${updatedLead.budget}
+
+Timeline : ${updatedLead.timeline}
+
+Description : ${updatedLead.description}
+
+Click below to continue on WhatsApp.`
+      );
     }
   };
 
-  const openWhatsApp = (leadData = lead) => {
+  const openWhatsApp = () => {
     const message = `Hi Maverick Minds,
-My name is ${leadData.name || ""}.
-Phone: ${leadData.phone || ""}
-Project Type: ${leadData.project || ""}
-Budget: ${leadData.budget || ""}
-Preferred Meeting Time: ${leadData.time || ""}
 
-I want to discuss my project.`;
+Service : ${lead.service}
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
-    )}`;
+Name : ${lead.name}
 
-    window.open(url, "_blank");
+Phone : ${lead.phone}
+
+Budget : ${lead.budget}
+
+Timeline : ${lead.timeline}
+
+Project :
+
+${lead.description}`;
+
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
-
-  return (
+    return (
     <>
       <button className="chatbot-toggle" onClick={() => setOpen(!open)}>
-        {open ? "×" : "💬"}
+        {open ? (
+          "×"
+        ) : (
+          <img
+            src={chatbotAvatar}
+            alt="Chat Support"
+            className="chatbot-avatar"
+          />
+        )}
       </button>
 
       {open && (
@@ -147,10 +214,11 @@ I want to discuss my project.`;
               <h4>Maverick Minds</h4>
               <p>Online Assistant</p>
             </div>
+
             <button onClick={() => setOpen(false)}>×</button>
           </div>
 
-          <div className="chatbot-body">
+          <div className="chatbot-body" ref={bodyRef}>
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -162,29 +230,41 @@ I want to discuss my project.`;
               </div>
             ))}
 
-            {!leadMode && (
+            {!leadMode && !selectedService && (
               <div className="chatbot-options">
                 <button onClick={() => handleServiceClick("website")}>
                   Website Development
                 </button>
+
                 <button onClick={() => handleServiceClick("app")}>
                   App Development
                 </button>
+
                 <button onClick={() => handleServiceClick("erp")}>
                   ERP Software
                 </button>
+
                 <button onClick={() => handleServiceClick("uiux")}>
                   UI/UX Design
                 </button>
-                <button onClick={startLeadFlow}>Book Free Consultation</button>
-                <button onClick={() => openWhatsApp()}>Talk on WhatsApp</button>
+              </div>
+            )}
+
+            {!leadMode && selectedService && (
+              <div className="chatbot-options">
+                <button onClick={openWhatsApp}>Continue on WhatsApp</button>
               </div>
             )}
           </div>
 
           {leadMode && (
             <form className="chatbot-input" onSubmit={handleLeadInput}>
-              <input name="message" placeholder="Type here..." />
+              <input
+                name="message"
+                placeholder="Type here..."
+                autoComplete="off"
+              />
+
               <button type="submit">Send</button>
             </form>
           )}

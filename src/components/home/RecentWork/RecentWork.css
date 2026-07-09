@@ -9,9 +9,11 @@
 }
 
 .recent-work-top {
-  width: 88%;
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 32px;
   margin: 0 auto;
+  box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -86,11 +88,6 @@
 .recent-work-arrow-next-circle {
 }
 
-/* .recent-work-arrow-circle:hover {
-  background: #ffffff;
-  color: #060014;
-} */
-
 .recent-work-stage {
   width: 100%;
   height: 555px;
@@ -103,7 +100,7 @@
 }
 
 .work-card {
-  width:  480px;
+  width: 480px;
   height: 580px;
   position: absolute;
   top: 0;
@@ -131,14 +128,14 @@
 
 .work-image-wrap {
   width: 100%;
-  height: 340px;              /* 318 -> 340 */
+  height: 340px;
   overflow: hidden;
   border-radius: 4px;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px;               /* 14px -> 4px */
+  padding: 1px;
   box-sizing: border-box;
 }
 
@@ -149,11 +146,8 @@
   object-position: center;
   display: block;
   transition: transform 0.8s ease;
-  transform: scale(1.08);     /* Image thodi badi lagegi */
+  transform: scale(1.08);
 }
-/* .work-image-wrap.center-image img {
-  transform: translateY(-18px);
-} */
 
 .work-info {
   margin-top: 28px;
@@ -162,7 +156,6 @@
 
 .work-info h3 {
   margin: 0 0 15px;
-
   font-size: 36px;
   line-height: 1.2;
   font-weight: 400;
@@ -198,12 +191,19 @@
 }
 
 @media (max-width: 1200px) {
+  .recent-work-top {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+
   .recent-work-stage {
     height: 520px;
   }
 
   .work-card {
-    width:  480px;
+    width: 480px;
     height: 595px;
   }
 }
@@ -215,7 +215,9 @@
   }
 
   .recent-work-top {
-    width: 90%;
+    width: 100%;
+    padding: 0 27px;
+    box-sizing: border-box;
   }
 
   .recent-work-top h2 {

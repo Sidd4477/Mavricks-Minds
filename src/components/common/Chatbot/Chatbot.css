@@ -2,16 +2,35 @@
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
+  width: 66px;
+  height: 66px;
   border: none;
-  background: #df062e;
-  color: #ffffff;
-  font-size: 25px;
+  background: transparent;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 9999;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.chatbot-toggle {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.chatbot-avatar {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.chatbot-toggle:hover .chatbot-avatar {
+  transform: scale(1.08);
 }
 
 .chatbot-box {
@@ -24,14 +43,14 @@
   border-radius: 22px;
   overflow: hidden;
   z-index: 9999;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
 }
 
 .chatbot-header {
-  background: #070116;
+  background: #622ee7;
   color: #ffffff;
   padding: 16px;
   display: flex;
@@ -83,7 +102,7 @@
 }
 
 .user-message {
-  background: #df062e;
+  background: #622ee7;
   color: #ffffff;
   margin-left: auto;
   border-bottom-right-radius: 4px;
@@ -97,9 +116,9 @@
 }
 
 .chatbot-options button {
-  border: 1px solid #df062e;
+  border: 1px solid #622ee7;
   background: #ffffff;
-  color: #df062e;
+  color: #622ee7;
   padding: 10px 12px;
   border-radius: 12px;
   cursor: pointer;
@@ -109,7 +128,7 @@
 }
 
 .chatbot-options button:hover {
-  background: #df062e;
+  background: #622ee7;
   color: #ffffff;
 }
 
@@ -132,7 +151,7 @@
 .chatbot-input button {
   margin-left: 8px;
   border: none;
-  background: #df062e;
+  background: #622ee7;
   color: #ffffff;
   padding: 0 14px;
   border-radius: 12px;
@@ -151,5 +170,12 @@
   .chatbot-toggle {
     right: 18px;
     bottom: 18px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .chatbot-avatar {
+    width: 54px;
+    height: 54px;
   }
 }

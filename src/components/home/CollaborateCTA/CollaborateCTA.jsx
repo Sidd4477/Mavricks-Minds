@@ -10,11 +10,11 @@ const CollaborateCTA = () => {
           <span className="collaborate-star">✦</span>
           <span>Collaborate With Maverick Minds</span>
           <span className="collaborate-star">✦</span>
-          <span>Make It Happen</span>
+          <span>Let's Make It Happen</span>
          <span className="collaborate-star">✦</span>
           <span>Collaborate With Maverick Minds</span>
           <span className="collaborate-star">✦</span>
-          <span>Make It Happen</span>
+          <span>Let's Make It Happen</span>
 
           <span>Collaborate With Maverick Minds</span>
           <span className="collaborate-star">✦</span>

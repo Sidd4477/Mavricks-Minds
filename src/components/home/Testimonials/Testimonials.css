@@ -208,12 +208,12 @@
   display: block;
   transition: .3s;
 }
-
+/* 
 .testimonial-arrow-btn:hover .testimonial-arrow-circle {
   background: #563a9c;
   border-color: #563a9c;
   transform: scale(1.08);
-}
+} */
 
 .testimonial-arrow-left {
   left: 20px;
