@@ -23,12 +23,14 @@ const Header = () => {
         </div>
 
         <div className="header-right">
-          <button className="get-touch-btn">Get In Touch</button>
+          <button className="get-touch-btn" type="button">
+            Get In Touch
+          </button>
 
-          <button className="menu-btn" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
+          <button className="menu-btn" type="button" aria-label="Menu">
+            <span className="menu-line"></span>
+            <span className="menu-line"></span>
+            <span className="menu-line"></span>
           </button>
         </div>
       </div>

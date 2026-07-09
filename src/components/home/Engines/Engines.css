@@ -10,13 +10,15 @@
 
 .engines-container {
   width: 100%;
-  max-width: 1180px;
-  padding: 0 32px;
+  max-width: 1230px;
+  padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   position: relative;
   z-index: 2;
 }

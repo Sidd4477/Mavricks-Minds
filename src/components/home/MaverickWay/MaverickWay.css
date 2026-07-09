@@ -56,7 +56,7 @@
   margin: 58px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 35px;
 }
 
 .maverick-process-card {

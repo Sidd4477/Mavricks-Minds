@@ -189,10 +189,10 @@
 
 /* ARROW CIRCLE */
 .testimonial-arrow-circle {
-  width: 84px;
-  height: 84px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid white;
   background: transparent;
   display: flex;
   align-items: center;
@@ -207,6 +207,9 @@
   line-height: 1;
   display: block;
   transition: .3s;
+ justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 /* 
 .testimonial-arrow-btn:hover .testimonial-arrow-circle {

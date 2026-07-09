@@ -10,13 +10,15 @@
 
 .recent-work-top {
   width: 100%;
-  max-width: 1180px;
-  padding: 0 32px;
+  max-width: 1230px;
   margin: 0 auto;
+  padding: 0;
   box-sizing: border-box;
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
   position: relative;
   z-index: 20;
 }
@@ -192,11 +194,12 @@
 
 @media (max-width: 1200px) {
   .recent-work-top {
-    width: 100%;
-    max-width: 1180px;
-    padding: 0 32px;
-    box-sizing: border-box;
-  }
+  width: 92%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
 
   .recent-work-stage {
     height: 520px;
@@ -214,12 +217,11 @@
     padding: 65px 0 55px;
   }
 
-  .recent-work-top {
-    width: 100%;
-    padding: 0 27px;
-    box-sizing: border-box;
-  }
-
+.recent-work-top {
+  width: 100%;
+  padding: 0 27px;
+  box-sizing: border-box;
+}
   .recent-work-top h2 {
     font-size: 34px;
   }

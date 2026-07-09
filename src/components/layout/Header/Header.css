@@ -32,7 +32,7 @@
 .header-brand {
   display: flex;
   align-items: center;
-   transform: translateX(-15px);
+  transform: translateX(-25px);
 }
 
 .header-logo-icon {
@@ -54,8 +54,9 @@
   font-size: 21px;
   line-height: 1;
 
-  letter-spacing: 0.4px;
+  transform: translateX(-12px);
 
+  letter-spacing: 0.4px;
   font-weight: 250;
 }
 
@@ -66,68 +67,76 @@
 .header-logo-text p {
   margin-top: 5px;
 
+  transform: translateX(-12px);
+
   color: #ffffff;
 
   font-size: 7px;
   letter-spacing: 1.4px;
 
   font-weight: 500;
-
   opacity: 0.92;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 30px;
 }
 
 .get-touch-btn {
-  width: 116px;
-  height: 32px;
-
+   width: 136px;
+  height: 42px;
+  font-size: 15px;
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 999px;
 
   background: transparent;
-
   color: #ffffff;
 
-  font-size: 14px;
-  font-weight: 500;
+  transform: translateX(45px);
+
+
+  font-weight: 600;
 
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .get-touch-btn:hover {
   background: #ffffff;
   color: #060018;
+  width: 136px;
+  height: 42px;
 }
 
 .menu-btn {
-  width: 108px;
-  height: 108px;
+  width: 78px;
+  height: 78px;
 
   background: transparent;
   border: none;
   padding: 0;
+  margin: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  gap: 4px;
-
+  gap: 8px;
   cursor: pointer;
+
+  transform: translateX(25px);
 }
 
-.menu-btn span {
-  width: 14px;
-  height: 1.5px;
+.menu-btn .menu-line {
+  display: block;
+
+  width: 30px;
+  height: 3px;
 
   background: #ffffff;
-
   border-radius: 10px;
 }
 
@@ -146,6 +155,10 @@
     height: 44px;
   }
 
+  .header-brand {
+    transform: translateX(0);
+  }
+
   .header-logo-icon {
     width: 40px;
     height: 40px;
@@ -157,11 +170,13 @@
 
   .header-logo-text h1 {
     font-size: 18px;
+    transform: translateX(-8px);
   }
 
   .header-logo-text p {
     font-size: 5px;
     letter-spacing: 1px;
+    transform: translateX(-8px);
   }
 
   .header-right {
@@ -169,8 +184,20 @@
   }
 
   .get-touch-btn {
-    width: 95px;
-    height: 28px;
-    font-size: 9px;
+    width: 108px;
+    height: 32px;
+    font-size: 10px;
+    transform: translateX(0);
+  }
+
+  .menu-btn {
+    width: 60px;
+    height: 60px;
+    transform: translateX(0);
+  }
+
+  .menu-btn .menu-line {
+    width: 26px;
+    height: 2px;
   }
 }
