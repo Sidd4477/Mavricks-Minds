@@ -22,7 +22,7 @@ const services = [
   },
   {
     number: "03",
-    title: " Gaming Design",
+    title: "I Gaming Design",
     text: "We help Hypercasual Games grow fast with performance-driven user acquisition and high-quality players.",
     image: gameDesignImg,
   },
