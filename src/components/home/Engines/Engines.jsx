@@ -55,6 +55,22 @@ const icons = [
   },
 ];
 
+const firstRowIcons = icons.slice(0, 5);
+const secondRowIcons = icons.slice(5, 10);
+
+const EngineIcon = ({ icon }) => {
+  return (
+    <div className={`engine-icon ${icon.className}`}>
+      <img
+        src={icon.icon}
+        alt={icon.name}
+        className="engine-logo"
+        draggable="false"
+      />
+    </div>
+  );
+};
+
 const Engines = () => {
   return (
     <section className="engines-section">
@@ -80,11 +96,37 @@ const Engines = () => {
         </div>
 
         <div className="engines-icons">
-          {icons.map((icon) => (
-            <div className={`engine-icon ${icon.className}`} key={icon.name}>
-              <img src={icon.icon} alt={icon.name} className="engine-logo" />
+          <div className="engine-marquee engine-marquee-top">
+            <div className="engine-track engine-track-left">
+              <div className="engine-icon-group">
+                {firstRowIcons.map((icon) => (
+                  <EngineIcon icon={icon} key={`first-original-${icon.name}`} />
+                ))}
+              </div>
+
+              <div className="engine-icon-group" aria-hidden="true">
+                {firstRowIcons.map((icon) => (
+                  <EngineIcon icon={icon} key={`first-copy-${icon.name}`} />
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="engine-marquee engine-marquee-bottom">
+            <div className="engine-track engine-track-right">
+              <div className="engine-icon-group">
+                {secondRowIcons.map((icon) => (
+                  <EngineIcon icon={icon} key={`second-original-${icon.name}`} />
+                ))}
+              </div>
+
+              <div className="engine-icon-group" aria-hidden="true">
+                {secondRowIcons.map((icon) => (
+                  <EngineIcon icon={icon} key={`second-copy-${icon.name}`} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

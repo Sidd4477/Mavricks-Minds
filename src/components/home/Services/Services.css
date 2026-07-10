@@ -5,15 +5,14 @@
   overflow: hidden;
   padding: 78px 0 70px;
 }
-
 .services-content {
-  width: 100%;
-  max-width: 1230px;
+  width: 1180px;
+  max-width: 1180px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 
 .services-title-box {

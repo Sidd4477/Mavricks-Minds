@@ -12,7 +12,7 @@
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   min-height: 620px;
-  background: #080318;
+  background: #070116;
 }
 
 .footer-bg {
@@ -21,18 +21,18 @@
   z-index: 0;
   background:
     radial-gradient(
-      ellipse 72% 85% at 50% 34%,
-      rgba(111, 70, 190, 0.95) 0%,
-      rgba(86, 58, 156, 0.78) 28%,
-      rgba(45, 26, 86, 0.55) 54%,
-      rgba(16, 8, 38, 0.78) 78%,
-      rgba(8, 3, 24, 1) 100%
+      ellipse 72% 68% at 50% 42%,
+      rgba(103, 67, 184, 0.28) 0%,
+      rgba(82, 48, 158, 0.2) 28%,
+      rgba(58, 31, 118, 0.12) 48%,
+      rgba(31, 14, 71, 0.06) 64%,
+      rgba(7, 1, 22, 0) 78%
     ),
     linear-gradient(
       180deg,
-      #09031a 0%,
-      #13072f 40%,
-      #080318 100%
+      #070116 0%,
+      #09021a 48%,
+      #070116 100%
     );
 }
 
@@ -41,11 +41,12 @@
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(
-      circle at center,
-      transparent 30%,
-      rgba(54, 33, 107, 0.34) 62%,
-      rgba(0, 0, 0, 0.82) 100%
+    linear-gradient(
+      to bottom,
+      rgba(7, 1, 22, 0.08) 0%,
+      rgba(7, 1, 22, 0.12) 30%,
+      rgba(7, 1, 22, 0.28) 64%,
+      rgba(7, 1, 22, 0.72) 100%
     );
 }
 
@@ -58,8 +59,9 @@
   z-index: 2;
   background: linear-gradient(
     to top,
-    rgba(8, 3, 24, 0.9),
-    rgba(38, 18, 78, 0.45),
+    rgba(7, 1, 22, 0.96),
+    rgba(16, 7, 38, 0.58),
+    rgba(32, 15, 72, 0.18),
     transparent
   );
 }
@@ -173,7 +175,7 @@
   border-radius: 12px;
   padding: 0 28px;
   font-size: 16px;
-  font-weight: 520px;
+  font-weight: 520;
   box-shadow: 0px 4px 22px rgba(151, 105, 255, 0.36);
   height: 48px;
   display: inline-flex;
@@ -267,24 +269,52 @@
 .footer-policy p {
   color: #ffffff;
   font-size: 16px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
   .footer-box {
     min-height: auto;
+    background: #070116;
   }
 
   .footer-bg {
     background:
       radial-gradient(
-        ellipse 95% 70% at 50% 28%,
-        rgba(111, 70, 190, 0.8) 0%,
-        rgba(100, 79, 153, 0.58) 49%,
-        rgba(73, 64, 100, 0.94) 78%,
-        rgb(15, 3, 53) 100%
+        ellipse 95% 64% at 50% 30%,
+        rgba(103, 67, 184, 0.24) 0%,
+        rgba(82, 48, 158, 0.16) 30%,
+        rgba(58, 31, 118, 0.1) 50%,
+        rgba(31, 14, 71, 0.05) 66%,
+        rgba(7, 1, 22, 0) 80%
       ),
-      #402e7c;
+      linear-gradient(
+        180deg,
+        #070116 0%,
+        #09021a 46%,
+        #070116 100%
+      );
+  }
+
+  .footer-dark-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(7, 1, 22, 0.06) 0%,
+        rgba(7, 1, 22, 0.12) 30%,
+        rgba(7, 1, 22, 0.3) 66%,
+        rgba(7, 1, 22, 0.76) 100%
+      );
+  }
+
+  .footer-bottom-fade {
+    background: linear-gradient(
+      to top,
+      rgba(7, 1, 22, 0.97),
+      rgba(16, 7, 38, 0.6),
+      rgba(32, 15, 72, 0.16),
+      transparent
+    );
   }
 
   .footer-content {

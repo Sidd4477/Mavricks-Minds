@@ -40,13 +40,13 @@
 .engines-left h2::after {
   content: "";
   display: block;
-  width: 180px;
+  width: 170px;
   height: 3px;
   background: hsl(0, 100%, 58%);
-  margin-top: -55px;
+  margin-top: -50px;
   margin-bottom: 55px;
-  margin-left: 82px;
-  transform: rotate(-7.5deg);
+  margin-left: 102px;
+  transform: rotate(-5.5deg);
   transform-origin: left center;
 }
 
@@ -63,135 +63,214 @@
   color: #7b4dff;
 }
 
+/* ================= ICON ANIMATION AREA ================= */
+
 .engines-icons {
   width: 600px;
   height: 320px;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 45px;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 7%,
+    #000000 93%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 7%,
+    #000000 93%,
+    transparent 100%
+  );
+}
+
+.engine-marquee {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.engine-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+.engine-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-right: 22px;
+  flex-shrink: 0;
+}
+
+/* Top row video ki tarah left side move karegi */
+
+.engine-track-left {
+  animation: engineSlideLeft 15s linear infinite;
+}
+
+/* Bottom row video ki tarah opposite direction move karegi */
+
+.engine-track-right {
+  animation: engineSlideRight 15s linear infinite;
 }
 
 .engine-icon {
-  width: 90px;
-  height: 90px;
-  border-radius: 15px;
+  width: 112px;
+  height: 112px;
+  min-width: 112px;
+  min-height: 112px;
+  border-radius: 18px;
   background: #ffffff;
-  position: absolute;
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  flex-shrink: 0;
+  transform: none;
 }
 
 .engine-logo {
-  width: 48px;
-  height: 48px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
   display: block;
+  user-select: none;
+  pointer-events: none;
 }
 
+/* ================= INDIVIDUAL ICON STYLING ================= */
+
 .framer {
-  left: 35px;
-  top: 35px;
-  transform: rotate(12deg);
   background: linear-gradient(145deg, #00d5ff, #1d36ff);
 }
 
-.python {
-  left: 205px;
-  top: 0;
-  transform: rotate(-15deg);
+.framer .engine-logo {
+  width: 56px;
+  height: 56px;
 }
 
+
+.python {
+  background: #ffffff;
+}
+
+
 .python .engine-logo {
-  width: 90px;
-  height: 90px;
+  width: 88px;
+  height: 88px;
 }
 
 .react {
-  left: 355px;
-  top: 65px;
-  transform: rotate(13deg);
+  background: #ffffff;
 }
 
 .react .engine-logo {
-  width: 90px;
-  height: 90px;
+  width: 84px;
+  height: 84px;
 }
 
 .js {
-  right: 5px;
-  top: 8px;
-  transform: rotate(38deg);
+  background: #ffffff;
 }
 
 .js .engine-logo {
-  width: 115px;
-  height: 115px;
-  border-radius: 42px;
+  width: 105px;
+  height: 105px;
 }
 
 .shopify {
-  left: 50px;
-  top: 178px;
-  transform: rotate(19deg);
+  background: #ffffff;
 }
 
 .shopify .engine-logo {
-  width: 115px;
-  height: 115px;
+  width: 105px;
+  height: 105px;
 }
 
 .figma {
-  left: 215px;
-  top: 145px;
-  transform: rotate(0deg);
-  background-color: black;
+  background-color: #000000;
 }
 
 .figma .engine-logo {
-  width: 90px;
-  height: 90px;
+  width: 92px;
+  height: 92px;
 }
-
 .flutter {
-  right: 35px;
-  top: 120px;
-  transform: rotate(0deg);
+  background: #ffffff;
 }
 
 .flutter .engine-logo {
-  width: 90px;
-  height: 90px;
+  width: 86px;
+  height: 86px;
 }
 
 .adobe {
-  left: 190px;
-  bottom: -10px;
-  transform: rotate(-17deg);
   background: #ff1f10;
 }
 
+.adobe .engine-logo {
+  width: 60px;
+  height: 60px;
+}
+
 .java {
-  left: 355px;
-  bottom: 12px;
-  transform: rotate(0deg);
+  background: #ffffff;
 }
 
 .java .engine-logo {
-  width: 90px;
-  height: 90px;
+  width: 86px;
+  height: 86px;
 }
-
 .mongo {
-  right: 15px;
-  bottom: 20px;
-  transform: rotate(-28deg);
   background: #31b84b;
-  z-index: 5;
 }
 
 .mongo .engine-logo {
-  width: 90px;
-  height: 90px;
+  width: 84px;
+  height: 84px;
+}
+
+/* ================= MARQUEE KEYFRAMES ================= */
+
+@keyframes engineSlideLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes engineSlideRight {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Hover par animation pause */
+
+.engines-icons:hover .engine-track {
+  animation-play-state: paused;
 }
 
 .engines-bg-mark {
@@ -262,8 +341,62 @@
   }
 
   .engines-icons {
+    width: calc(100vw - 54px);
     height: 260px;
-    transform: scale(0.78);
+    transform: none;
     transform-origin: top left;
+    gap: 18px;
+  }
+
+  .engine-icon-group {
+    gap: 15px;
+    padding-right: 15px;
+  }
+
+  .engine-icon {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+    min-height: 82px;
+    border-radius: 13px;
+  }
+
+  .engine-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .python .engine-logo,
+  .react .engine-logo,
+  .figma .engine-logo,
+  .flutter .engine-logo,
+  .java .engine-logo,
+  .mongo .engine-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .js .engine-logo,
+  .shopify .engine-logo {
+    width: 92px;
+    height: 92px;
+  }
+
+  .framer .engine-logo,
+  .adobe .engine-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .engine-track-left,
+  .engine-track-right {
+    animation-duration: 12s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .engine-track-left,
+  .engine-track-right {
+    animation-play-state: paused;
   }
 }
