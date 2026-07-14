@@ -21,7 +21,7 @@ const processCards = [
 
 const MaverickWay = () => {
   return (
-    <section className="maverick-way-section">
+   <section id="process" className="maverick-way-section">
       <div className="maverick-way-bg-left">m</div>
       <div className="maverick-way-bg-right">m</div>
 

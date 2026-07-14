@@ -206,7 +206,7 @@ const RecentWork = () => {
   };
 
   return (
-    <section className="recent-work-section">
+  <section id="projects" className="recent-work-section">
       <div className="recent-work-top">
         <div>
           <h2>Recent Work</h2>

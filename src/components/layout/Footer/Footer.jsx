@@ -2,6 +2,17 @@ import "./Footer.css";
 import headerLogo from "../../../assets/images/logos/HeaderLogo.png.png";
 
 const Footer = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <footer className="footer-section">
       <div className="footer-box">
@@ -23,6 +34,7 @@ const Footer = () => {
               <div className="footer-brand-name">
                 <span>MAVERICK</span>MINDS
               </div>
+
               <p>BUILDING IDEAS INTO DIGITAL REALITY</p>
             </div>
           </div>
@@ -39,7 +51,7 @@ const Footer = () => {
           <div className="footer-links">
             <div className="footer-col">
               <h4>Services</h4>
-              <p>UI/UX</p>
+              <p>UI/UX Design</p>
               <p>Development</p>
               <p>Marketing</p>
               <p>SEO</p>
@@ -48,17 +60,78 @@ const Footer = () => {
 
             <div className="footer-col">
               <h4>Navigation</h4>
-              <p>Home</p>
-              <p>Process</p>
-              <p>Projects</p>
-              <p>Testimonials</p>
-              <p>FAQ</p>
+
+              <p
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToSection("home")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    scrollToSection("home");
+                  }
+                }}
+              >
+                Home
+              </p>
+
+              <p
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToSection("process")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    scrollToSection("process");
+                  }
+                }}
+              >
+                Process
+              </p>
+
+              <p
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToSection("projects")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    scrollToSection("projects");
+                  }
+                }}
+              >
+                Projects
+              </p>
+
+              <p
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToSection("testimonials")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    scrollToSection("testimonials");
+                  }
+                }}
+              >
+                Testimonials
+              </p>
+
+              <p
+                role="button"
+                tabIndex={0}
+                onClick={() => scrollToSection("faq")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    scrollToSection("faq");
+                  }
+                }}
+              >
+                FAQ
+              </p>
             </div>
 
             <div className="footer-col">
               <h4>Contact</h4>
               <p>+91 99965-24562</p>
-              <p>Address</p>
+              <p>+91 88168-24562</p>
+              <p>Address:<br/> Maverickminds, Building 02, Floor 2, Kunjpura Road, Karnal, Haryana - 132001</p>
             </div>
           </div>
 

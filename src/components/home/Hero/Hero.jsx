@@ -24,7 +24,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       <div className="hero-content">
         <div className="hero-title-wrap">
           <span className="hero-title-line"></span>

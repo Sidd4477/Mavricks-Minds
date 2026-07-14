@@ -41,8 +41,8 @@ const Testimonials = () => {
           ? 0
           : activeIndex + 1
         : activeIndex === 0
-        ? testimonials.length - 1
-        : activeIndex - 1;
+          ? testimonials.length - 1
+          : activeIndex - 1;
 
     setDirection(type);
     setNextIndex(newIndex);
@@ -73,7 +73,7 @@ const Testimonials = () => {
   );
 
   return (
-    <section className="testimonials-section">
+   <section id="testimonials" className="testimonials-section">
       <div className="testimonials-container">
         <div className="testimonials-title">
           <h2>Loved By Businesses Worldwide</h2>
@@ -86,7 +86,7 @@ const Testimonials = () => {
           aria-label="Previous testimonial"
         >
           <span className="testimonial-arrow-circle">
-            <span className="testimonial-arrow-icon">&#8249;</span>
+            <span className="testimonial-arrow-icon"></span>
           </span>
         </button>
 
@@ -97,7 +97,7 @@ const Testimonials = () => {
           aria-label="Next testimonial"
         >
           <span className="testimonial-arrow-circle">
-            <span className="testimonial-arrow-icon">&#8250;</span>
+            <span className="testimonial-arrow-icon"></span>
           </span>
         </button>
 
