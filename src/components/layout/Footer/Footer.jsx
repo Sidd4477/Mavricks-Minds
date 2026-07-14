@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { PopupModal } from "react-calendly";
-
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaXTwitter,
+} from "react-icons/fa6";
 import "./Footer.css";
 import headerLogo from "../../../assets/images/logos/HeaderLogo.png.png";
 
@@ -172,12 +177,43 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="footer-socials">
-              <span>𝕏</span>
-              <span>f</span>
-              <span>in</span>
-              <span>◎</span>
-            </div>
+           <div className="footer-socials">
+  <a
+    href="https://x.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X"
+  >
+    <FaXTwitter />
+  </a>
+
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/maverick-mindss/posts/?feedView=all"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    <FaLinkedinIn />
+  </a>
+
+  <a
+    href="https://www.instagram.com/maverickminds.2024?igsh=MTB3dGhhanBxZWMxbg=="
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    <FaInstagram />
+  </a>
+</div>
 
             <div className="footer-bottom">
               <p>Copyright © Maverick Minds</p>
