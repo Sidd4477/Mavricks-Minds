@@ -79,7 +79,7 @@ const CollaborateCTA = () => {
       </section>
 
       <PopupModal
-        url={"https://calendly.com/jhasiddharth495/30min"}
+        url={"https://calendly.com/_maverickminds/30min"}
         open={isCalendlyOpen}
         onModalClose={handleCalendlyClose}
         rootElement={document.getElementById("root")}

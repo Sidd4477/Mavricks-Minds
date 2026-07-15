@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { PopupModal } from "react-calendly";
+
 import "./Hero.css";
 
 import hero1 from "../../../assets/images/hero/hero1.png.png";
@@ -13,6 +16,11 @@ import companyLogo4 from "../../../assets/images/logos/Company Logo4.png.png";
 import companyLogo5 from "../../../assets/images/logos/Company Logo5.png.png";
 
 const Hero = () => {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+
+  const CALENDLY_URL =
+    "https://calendly.com/YOUR-USERNAME/30-minute-meeting";
+
   const heroImages = [hero1, hero2, hero3, hero4];
 
   const companyLogos = [
@@ -23,62 +31,97 @@ const Hero = () => {
     companyLogo5,
   ];
 
+  const handleCalendlyOpen = () => {
+    setIsCalendlyOpen(true);
+  };
+
+  const handleCalendlyClose = () => {
+    setIsCalendlyOpen(false);
+  };
+
   return (
-    <section id="home" className="hero-section">
-      <div className="hero-content">
-        <div className="hero-title-wrap">
-          <span className="hero-title-line"></span>
+    <>
+      <section id="home" className="hero-section">
+        <div className="hero-content">
+          <div className="hero-title-wrap">
+            <span className="hero-title-line"></span>
 
-          <h1>
-            If You're Building Something Big,
-            <br />
-            You're In The Right Place
-            <span className="red-underline"></span>
-          </h1>
-        </div>
+            <h1>
+              If You're Building Something Big,
+              <br />
+              You're In The Right Place
+              <span className="red-underline"></span>
+            </h1>
+          </div>
 
-        <p>
-          Maverick Mind Is A Global UX And Web Design Agency, Helping Brands
-          Redefine Experiences And Empower Business Growth.
-        </p>
+          <p>
+            Maverick Mind Is A Global UX And Web Design Agency, Helping Brands
+            Redefine Experiences And Empower Business Growth.
+          </p>
 
-        <div className="hero-actions">
-          <button className="hero-btn">Get In Touch</button>
+          <div className="hero-actions">
+            <button
+              type="button"
+              className="hero-btn"
+              onClick={handleCalendlyOpen}
+            >
+              Get In Touch
+            </button>
 
-          <img src={mmIcon} alt="Maverick icon" className="mm-icon" />
+            <img
+              src={mmIcon}
+              alt="Maverick icon"
+              className="mm-icon"
+            />
 
-          <div className="hero-rating">
-            <div>
-              <strong>4.9</strong>
-              <span>★★★★★</span>
+            <div className="hero-rating">
+              <div>
+                <strong>4.9</strong>
+                <span>★★★★★</span>
+              </div>
+
+              <small>Based On 49 Maverick Reviews</small>
             </div>
-            <small>Based On 49 Maverick Reviews</small>
           </div>
         </div>
-      </div>
 
-      <div className="hero-image-marquee">
-        <div className="hero-image-track">
-          {[...heroImages, ...heroImages].map((img, index) => (
-            <div className="hero-img-card" key={index}>
-              <img src={img} alt="" />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="trusted-section">
-        <p>Trusted by Companies</p>
-
-        <div className="trusted-logo-marquee">
-          <div className="trusted-logo-track">
-            {[...companyLogos, ...companyLogos].map((logo, index) => (
-              <img src={logo} alt="" key={index} />
+        <div className="hero-image-marquee">
+          <div className="hero-image-track">
+            {[...heroImages, ...heroImages].map((img, index) => (
+              <div className="hero-img-card" key={index}>
+                <img src={img} alt="" />
+              </div>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+
+        <div className="trusted-section">
+          <p>Trusted by Companies</p>
+
+          <div className="trusted-logo-marquee">
+            <div className="trusted-logo-track">
+              {[...companyLogos, ...companyLogos].map((logo, index) => (
+                <img src={logo} alt="" key={index} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupModal
+        url={"https://calendly.com/_maverickminds/30min"}
+        open={isCalendlyOpen}
+        onModalClose={handleCalendlyClose}
+        rootElement={document.getElementById("root")}
+        pageSettings={{
+          backgroundColor: "ffffff",
+          hideEventTypeDetails: false,
+          hideLandingPageDetails: false,
+          primaryColor: "6f46be",
+          textColor: "080318",
+        }}
+      />
+    </>
   );
 };
 
