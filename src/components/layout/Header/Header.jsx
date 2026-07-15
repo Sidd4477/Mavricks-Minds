@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { PopupModal } from "react-calendly";
 
+import {
+  FaArrowUpRightFromSquare,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
+
 import "./Header.css";
 
 import logoIcon from "../../../assets/images/logos/HeaderLogo.png.png";
@@ -149,8 +157,12 @@ const Header = () => {
                   aria-label="Email address"
                 />
 
-                <button type="submit" aria-label="Subscribe">
-                  ↗
+                <button
+                  type="submit"
+                  className="newsletter-submit-btn"
+                  aria-label="Subscribe"
+                >
+                  <FaArrowUpRightFromSquare className="subscribe-arrow-icon" />
                 </button>
               </form>
             </div>
@@ -162,7 +174,7 @@ const Header = () => {
                 rel="noreferrer"
                 aria-label="X"
               >
-                X
+                <FaXTwitter />
               </a>
 
               <a
@@ -171,7 +183,7 @@ const Header = () => {
                 rel="noreferrer"
                 aria-label="Facebook"
               >
-                f
+                <FaFacebookF />
               </a>
 
               <a
@@ -180,7 +192,7 @@ const Header = () => {
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
-                in
+                <FaLinkedinIn />
               </a>
 
               <a
@@ -189,7 +201,7 @@ const Header = () => {
                 rel="noreferrer"
                 aria-label="Instagram"
               >
-                ◎
+                <FaInstagram />
               </a>
             </div>
           </div>
