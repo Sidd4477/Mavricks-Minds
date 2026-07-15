@@ -160,12 +160,10 @@ const Footer = () => {
               <div className="footer-col">
                 <h4>Contact</h4>
 
-                <p>+91 99965-24562</p>
+                <p>+91 99965-24562,</p>
                 <p>+91 88168-24562</p>
 
                 <p>
-                  Address:
-                  <br />
                   Maverick Minds,
                   <br />
                   Building 02, Floor 2,
