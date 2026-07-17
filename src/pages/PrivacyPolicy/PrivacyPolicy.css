@@ -56,10 +56,8 @@
   background: rgba(130, 73, 245, 0.16);
 }
 
-/*
-  Header aur baaki website sections ke
-  same width ke according alignment.
-*/
+/* Header aur website sections ke according alignment */
+
 .privacy-container {
   width: calc(100% - 64px);
   max-width: 1180px;
@@ -118,6 +116,8 @@
   max-width: 900px;
 
   margin: 0 0 75px;
+
+  scroll-margin-top: 120px;
 }
 
 .privacy-label {
@@ -229,16 +229,22 @@
   letter-spacing: 0.5px;
 }
 
+/*
+  Heading ke main text aur paragraph ka
+  starting point same rakhne ke liye
+  padding-left 36px rakha gaya hai.
+*/
+
 .privacy-section p {
   max-width: 960px;
 
   margin: 0 0 22px;
-  padding-left: 56px;
+  padding-left: 36px;
 
   color: rgba(255, 255, 255, 0.64);
 
-  font-size: 15px;
-  line-height: 1.95;
+  font-size: 18px;
+  line-height: 1.9;
   font-weight: 400;
 
   box-sizing: border-box;
@@ -254,7 +260,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  margin: 36px 0 0 56px;
+  margin: 36px 0 0 36px;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
@@ -311,9 +317,7 @@
 .privacy-contact-item a:hover {
   color: #b99aff;
 }
-.privacy-heading {
-  scroll-margin-top: 120px;
-}
+
 /* ================= TABLET ================= */
 
 @media (max-width: 1024px) {
@@ -331,6 +335,10 @@
 
   .privacy-introduction {
     margin-bottom: 64px;
+  }
+
+  .privacy-section p {
+    font-size: 17px;
   }
 }
 
@@ -395,7 +403,7 @@
   .privacy-section p {
     padding-left: 0;
 
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.85;
   }
 
@@ -428,6 +436,7 @@
 
   .privacy-label {
     min-height: 31px;
+
     padding: 7px 13px;
 
     font-size: 10px;
@@ -444,6 +453,11 @@
 
   .privacy-section h2 {
     font-size: 20px;
+  }
+
+  .privacy-section p {
+    font-size: 16px;
+    line-height: 1.8;
   }
 
   .privacy-contact-item {
