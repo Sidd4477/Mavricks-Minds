@@ -12,19 +12,44 @@ import CollaborateCTA from "../../components/home/CollaborateCTA/CollaborateCTA"
 import FAQ from "../../components/home/FAQ/FAQ";
 import Footer from "../../components/layout/Footer/Footer";
 import Chatbot from "../../components/common/Chatbot/Chatbot";
+
 const Home = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Services />
-      <CTA />
-      <RecentWork />
-      <MaverickWay />
-      <Engines />
-      <Testimonials />
-      <CollaborateCTA />
-      <FAQ />
+
+      <main className="home-page">
+        <div id="home">
+          <Hero />
+        </div>
+
+        <div id="services">
+          <Services />
+        </div>
+
+        <CTA />
+
+        <div id="projects">
+          <RecentWork />
+        </div>
+
+        <div id="process">
+          <MaverickWay />
+        </div>
+
+        <Engines />
+
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+
+        <CollaborateCTA />
+
+        <div id="faq">
+          <FAQ />
+        </div>
+      </main>
+
       <Footer />
       <Chatbot />
     </>

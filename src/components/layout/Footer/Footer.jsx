@@ -1,29 +1,50 @@
 import { useState } from "react";
 import { PopupModal } from "react-calendly";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import {
   FaInstagram,
   FaLinkedinIn,
   FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
+
 import "./Footer.css";
+
 import headerLogo from "../../../assets/images/logos/HeaderLogo.png.png";
 
 const Footer = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
-  const CALENDLY_URL =
-    "https://calendly.com/YOUR-USERNAME/30-minute-meeting";
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
+    const performScroll = () => {
+      const section = document.getElementById(sectionId);
 
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
+    if (location.pathname === "/") {
+      performScroll();
+      return;
     }
+
+    navigate("/");
+
+    setTimeout(() => {
+      performScroll();
+    }, 200);
+  };
+
+  const handlePrivacyPolicyOpen = () => {
+    navigate("/privacy-policy");
   };
 
   const handleCalendlyOpen = () => {
@@ -32,6 +53,13 @@ const Footer = () => {
 
   const handleCalendlyClose = () => {
     setIsCalendlyOpen(false);
+  };
+
+  const handleKeyboardClick = (event, callback) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      callback();
+    }
   };
 
   return (
@@ -95,11 +123,11 @@ const Footer = () => {
                   role="button"
                   tabIndex={0}
                   onClick={() => scrollToSection("home")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      scrollToSection("home");
-                    }
-                  }}
+                  onKeyDown={(event) =>
+                    handleKeyboardClick(event, () =>
+                      scrollToSection("home")
+                    )
+                  }
                 >
                   Home
                 </p>
@@ -108,11 +136,11 @@ const Footer = () => {
                   role="button"
                   tabIndex={0}
                   onClick={() => scrollToSection("process")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      scrollToSection("process");
-                    }
-                  }}
+                  onKeyDown={(event) =>
+                    handleKeyboardClick(event, () =>
+                      scrollToSection("process")
+                    )
+                  }
                 >
                   Process
                 </p>
@@ -121,11 +149,11 @@ const Footer = () => {
                   role="button"
                   tabIndex={0}
                   onClick={() => scrollToSection("projects")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      scrollToSection("projects");
-                    }
-                  }}
+                  onKeyDown={(event) =>
+                    handleKeyboardClick(event, () =>
+                      scrollToSection("projects")
+                    )
+                  }
                 >
                   Projects
                 </p>
@@ -134,11 +162,11 @@ const Footer = () => {
                   role="button"
                   tabIndex={0}
                   onClick={() => scrollToSection("testimonials")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      scrollToSection("testimonials");
-                    }
-                  }}
+                  onKeyDown={(event) =>
+                    handleKeyboardClick(event, () =>
+                      scrollToSection("testimonials")
+                    )
+                  }
                 >
                   Testimonials
                 </p>
@@ -147,11 +175,11 @@ const Footer = () => {
                   role="button"
                   tabIndex={0}
                   onClick={() => scrollToSection("faq")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      scrollToSection("faq");
-                    }
-                  }}
+                  onKeyDown={(event) =>
+                    handleKeyboardClick(event, () =>
+                      scrollToSection("faq")
+                    )
+                  }
                 >
                   FAQ
                 </p>
@@ -175,49 +203,62 @@ const Footer = () => {
               </div>
             </div>
 
-           <div className="footer-socials">
-  <a
-    href="https://x.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="X"
-  >
-    <FaXTwitter />
-  </a>
+            <div className="footer-socials">
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+              >
+                <FaXTwitter />
+              </a>
 
-  <a
-    href="https://facebook.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-  >
-    <FaFacebookF />
-  </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
 
-  <a
-    href="https://www.linkedin.com/company/maverick-mindss/posts/?feedView=all"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <FaLinkedinIn />
-  </a>
+              <a
+                href="https://www.linkedin.com/company/maverick-mindss/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
 
-  <a
-    href="https://www.instagram.com/maverickminds.2024?igsh=MTB3dGhhanBxZWMxbg=="
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-  >
-    <FaInstagram />
-  </a>
-</div>
+              <a
+                href="https://www.instagram.com/maverickminds.2024?igsh=MTB3dGhhanBxZWMxbg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+            </div>
 
             <div className="footer-bottom">
               <p>Copyright © Maverick Minds</p>
 
               <div className="footer-policy">
-                <p>Privacy Policy</p>
+                <p
+                  role="button"
+                  tabIndex={0}
+                  onClick={handlePrivacyPolicyOpen}
+                  onKeyDown={(event) =>
+                    handleKeyboardClick(
+                      event,
+                      handlePrivacyPolicyOpen
+                    )
+                  }
+                >
+                  Privacy Policy
+                </p>
+
                 <p>Terms Of Use</p>
               </div>
             </div>
@@ -226,7 +267,7 @@ const Footer = () => {
       </footer>
 
       <PopupModal
-        url={"https://calendly.com/_maverickminds/30min"}
+        url="https://calendly.com/_maverickminds/30min"
         open={isCalendlyOpen}
         onModalClose={handleCalendlyClose}
         rootElement={document.getElementById("root")}

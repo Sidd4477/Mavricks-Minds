@@ -272,7 +272,23 @@
   font-size: 14px;
   margin-top: 5px;
 }
+.footer-policy p {
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
 
+.footer-policy p:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.footer-policy p:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
 @media (max-width: 768px) {
   .footer-box {
     min-height: auto;
