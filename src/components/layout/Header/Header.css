@@ -849,8 +849,8 @@
   }
 
   .header-logo-icon {
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
   }
 
   .header-logo-text {
@@ -858,23 +858,25 @@
   }
 
   .header-logo-text h1 {
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 0.2px;
     transform: translateX(-6px);
   }
 
   .header-logo-text p {
-    font-size: 6px;
+    font-size: 8px;
     letter-spacing: 0.7px;
     transform: translateX(-6px);
   }
 
   .menu-btn {
     width: 28px;
+    margin-bottom: 8px;
   }
 
   .menu-btn .menu-line {
-    width: 24px;
+    width: 34px;
+    
   }
 
   .menu-overlay-inner {

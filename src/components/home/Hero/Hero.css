@@ -400,48 +400,51 @@
   }
 
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.08;
     letter-spacing: -0.7px;
   }
 
   .hero-content p {
-    margin-top: 13px;
+    margin-top: 18px;
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .hero-btn {
-    height: 47px;
-    font-size: 14px;
+    margin-top: 15px;
+    height: 55px;
+    font-size: 20px;
   }
 
   .mm-icon {
+    margin-top: 10px;
     width: 56px;
-    height: 40px;
+    height: 44px;
   }
 
   .hero-rating strong,
   .hero-rating span {
-    font-size: 16px;
+    margin-top: 12px;
+    font-size: 24px;
   }
 
   .hero-rating small {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .hero-image-marquee {
-    margin-top: 23px;
+    margin-top: 28px;
   }
 
   .hero-img-card {
-    width: 150px;
-    height: 162px;
+    width: 180px;
+    height: 202px;
     border-radius: 14px;
   }
 
   .trusted-section {
-    margin-top: 38px;
+    margin-top: 45px;
   }
 
   .trusted-logo-track {
@@ -450,6 +453,6 @@
 
   .trusted-logo-track img {
     width: 88px;
-    height: 25px;
+    height: 35px;
   }
 }
