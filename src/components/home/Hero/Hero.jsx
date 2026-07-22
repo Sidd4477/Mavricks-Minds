@@ -48,7 +48,7 @@ const Hero = () => {
 
             <h1>
               If You're Building Something Big,
-              <br />
+    
               You're In The Right Place
               <span className="red-underline"></span>
             </h1>

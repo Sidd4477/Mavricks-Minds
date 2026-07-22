@@ -685,21 +685,38 @@
 
 @media (max-width: 768px) {
   .site-header {
-    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    background: rgba(6, 0, 24, 0.52);
+    width: 100%;
+    height: 90px;
 
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    background: #050016;
+    border-bottom: none;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    box-shadow: none;
+
+    z-index: 9999;
+  }
+
+  .header-glass-layer {
+    display: none;
   }
 
   .header-inner {
     width: 100%;
-    height: 44px;
+    height: 100%;
 
-    padding: 0 14px;
-
+    padding: 0 20px 24px;
     box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 
   .header-brand {
@@ -721,59 +738,60 @@
   }
 
   .header-logo-text p {
-    font-size: 5px;
+    font-size: 8px;
     letter-spacing: 1px;
     transform: translateX(-8px);
   }
 
   .header-right {
-    gap: 8px;
+    gap: 0;
   }
 
   .get-touch-btn {
-    width: 100px;
-    height: 32px;
-
-    font-size: 10px;
-
-    transform: translateX(0);
+    display: none;
   }
 
   .menu-btn {
-    width: 48px;
-    height: 60px;
+    width: 28px;
+    height: 32px;
 
-    gap: 7px;
+    padding: 0;
+    margin: 0;
+
+    gap: 6px;
 
     transform: translateX(0);
+    margin-bottom: 1px;
   }
 
   .menu-btn .menu-line {
-    width: 26px;
-    height: 2px;
+    
+    width: 24px;
+    height: 3.5px;
   }
 
   .menu-btn.menu-open .menu-line:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(8.5px) rotate(45deg);
   }
 
   .menu-btn.menu-open .menu-line:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 
-  /* Mobile menu */
+  /* ================= MOBILE MENU ================= */
 
   .menu-overlay {
-    top: 70px;
+    top: 132px;
 
-    height: calc(100vh - 70px);
-    height: calc(100dvh - 70px);
+    height: calc(100vh - 132px);
+    height: calc(100dvh - 132px);
   }
 
   .menu-overlay-inner {
     width: 100%;
 
-    padding: 45px 24px 30px;
+    padding: 42px 20px 28px;
+    box-sizing: border-box;
 
     flex-direction: column;
     align-items: flex-start;
@@ -782,6 +800,8 @@
 
   .menu-navigation {
     width: 100%;
+
+    margin-top: 0;
     gap: 16px;
   }
 
@@ -807,6 +827,7 @@
 
   .menu-social-links {
     width: 100%;
+
     justify-content: flex-start;
 
     gap: 22px;
@@ -824,7 +845,7 @@
 
 @media (max-width: 480px) {
   .header-inner {
-    padding: 0 10px;
+    padding: 0 20px 24px;
   }
 
   .header-logo-icon {
@@ -837,26 +858,19 @@
   }
 
   .header-logo-text h1 {
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 0.2px;
     transform: translateX(-6px);
   }
 
   .header-logo-text p {
-    font-size: 4px;
+    font-size: 6px;
     letter-spacing: 0.7px;
     transform: translateX(-6px);
   }
 
-  .get-touch-btn {
-    width: 84px;
-    height: 30px;
-
-    font-size: 9px;
-  }
-
   .menu-btn {
-    width: 38px;
+    width: 28px;
   }
 
   .menu-btn .menu-line {
@@ -897,19 +911,5 @@
     height: 21px;
 
     font-size: 21px;
-  }
-}
-
-/* ================= SHORT HEIGHT ONLY ================= */
-/* Font size aur menu gap ko yahan override nahi kiya gaya */
-
-@media (max-height: 650px) {
-  .menu-overlay-inner {
-    padding-top: 28px;
-    padding-bottom: 22px;
-  }
-
-  .menu-bottom-right {
-    gap: 16px;
   }
 }
